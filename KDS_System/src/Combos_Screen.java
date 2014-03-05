@@ -9,14 +9,14 @@ import javax.swing.JButton;
 import java.awt.Font;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
-import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.awt.Color;
 
 
 public class Combos_Screen {
 	int item_id = -1;
 	double item_price = -1;
+	String item_name = "";
+	public static int table_id = 4;
 	JFrame frmCombinations;
 
 	/**
@@ -71,9 +71,11 @@ public class Combos_Screen {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				item_id = 708;
-				item_price = PriceQuery(item_id);
-				//System.out.println(item_price);
+				item_price = Query.PriceQuery(item_id);				
 				//Add a bacon or sausage and eggs to the ticket
+				item_name = Query.ItemQuery(item_id);			
+				Table_Edit_Screen.InsertItem(table_id, item_name, item_price);
+				frmCombinations.dispose();
 			}
 		});
 		btnBaconsausageNEgg.setFont(new Font("Tahoma", Font.PLAIN, 20));
@@ -85,8 +87,11 @@ public class Combos_Screen {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				item_id = 709;
-				item_price = PriceQuery(item_id);
+				item_price = Query.PriceQuery(item_id);
 				//Add a ham and eggs to the ticket
+				item_name = Query.ItemQuery(item_id);			
+				Table_Edit_Screen.InsertItem(table_id, item_name, item_price);
+				frmCombinations.dispose();
 			}
 		});
 		btnHamNEggs.setFont(new Font("Tahoma", Font.PLAIN, 20));
@@ -98,8 +103,11 @@ public class Combos_Screen {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				item_id = 710;
-				item_price = PriceQuery(item_id);
+				item_price = Query.PriceQuery(item_id);
 				//Add a steak and eggs to the ticket
+				item_name = Query.ItemQuery(item_id);			
+				Table_Edit_Screen.InsertItem(table_id, item_name, item_price);
+				frmCombinations.dispose();
 			}
 		});
 		btnSteakNEggs.setFont(new Font("Tahoma", Font.PLAIN, 20));
@@ -114,28 +122,8 @@ public class Combos_Screen {
 		
 	}
 	
-	public static double PriceQuery(int id)
-	{
-		String commandText = "SELECT * from MainMenu WHERE ID = " + id;
-		ResultSet rs;
-		double price = 0;
-		try{
-			//Execute command
-			rs = SQL.ExecuteResultSet(commandText); 
-		
-			while (rs.next()) {				
-				price = rs.getDouble("Price");
-				
-			}
-		}
-		catch (SQLException e) {
-			System.out.println(e.getMessage());
-		}
-		
-		return price;
-		
-		
-	}
+	
+	
 	
 	
 	

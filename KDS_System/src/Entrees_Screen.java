@@ -17,6 +17,8 @@ public class Entrees_Screen {
 	JFrame frmEntrees;
 	int item_id = 0;
 	double item_price = 0;
+	String item_name = "";
+	public static int table_id = 4;
 	/**
 	 * Launch the application.
 	 */
@@ -69,8 +71,11 @@ public class Entrees_Screen {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				item_id = 601;
-				item_price = Combos_Screen.PriceQuery(item_id);
+				item_price = Query.PriceQuery(item_id);
 				//Add country fried steak to ticket
+				item_name = Query.ItemQuery(item_id);			
+				Table_Edit_Screen.InsertItem(table_id, item_name, item_price);
+				frmEntrees.dispose();
 			}
 		});
 		btnCFriedSteak.setFont(new Font("Tahoma", Font.PLAIN, 20));
@@ -82,8 +87,11 @@ public class Entrees_Screen {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				item_id = 605;
-				item_price = Combos_Screen.PriceQuery(item_id);
+				item_price = Query.PriceQuery(item_id);
 				//Add a ribeye to the ticket
+				item_name = Query.ItemQuery(item_id);			
+				Table_Edit_Screen.InsertItem(table_id, item_name, item_price);
+				frmEntrees.dispose();
 			}
 		});
 		btnRibeye.setFont(new Font("Tahoma", Font.PLAIN, 20));
@@ -95,8 +103,11 @@ public class Entrees_Screen {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				item_id = 602;
-				item_price = Combos_Screen.PriceQuery(item_id);
+				item_price = Query.PriceQuery(item_id);
 				//Add a chicken strip dinner to the ticket
+				item_name = Query.ItemQuery(item_id);			
+				Table_Edit_Screen.InsertItem(table_id, item_name, item_price);
+				frmEntrees.dispose();
 			}
 		});
 		btnChicStrDin.setFont(new Font("Tahoma", Font.PLAIN, 20));
@@ -108,8 +119,11 @@ public class Entrees_Screen {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				item_id = 606;
-				item_price = Combos_Screen.PriceQuery(item_id);
+				item_price = Query.PriceQuery(item_id);
 				//Add catfish and chips to the ticket
+				item_name = Query.ItemQuery(item_id);			
+				Table_Edit_Screen.InsertItem(table_id, item_name, item_price);
+				frmEntrees.dispose();
 			}
 		});
 		btnFishNChip.setFont(new Font("Tahoma", Font.PLAIN, 20));
@@ -121,8 +135,11 @@ public class Entrees_Screen {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				item_id = 603;
-				item_price = Combos_Screen.PriceQuery(item_id);
+				item_price = Query.PriceQuery(item_id);
 				//Add cod filets to the ticket
+				item_name = Query.ItemQuery(item_id);			
+				Table_Edit_Screen.InsertItem(table_id, item_name, item_price);
+				frmEntrees.dispose();
 			}
 		});
 		btnCodFilets.setFont(new Font("Tahoma", Font.PLAIN, 20));
@@ -134,8 +151,11 @@ public class Entrees_Screen {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				item_id = 607;
-				item_price = Combos_Screen.PriceQuery(item_id);
+				item_price = Query.PriceQuery(item_id);
 				//Add chicken parmesan to the ticket
+				item_name = Query.ItemQuery(item_id);			
+				Table_Edit_Screen.InsertItem(table_id, item_name, item_price);
+				frmEntrees.dispose();
 			}
 		});
 		btnChicParm.setFont(new Font("Tahoma", Font.PLAIN, 20));
@@ -147,8 +167,11 @@ public class Entrees_Screen {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				item_id = 604;
-				item_price = Combos_Screen.PriceQuery(item_id);
+				item_price = Query.PriceQuery(item_id);
 				//Add a KC strip to the ticket
+				item_name = Query.ItemQuery(item_id);			
+				Table_Edit_Screen.InsertItem(table_id, item_name, item_price);
+				frmEntrees.dispose();
 			}
 		});
 		btnKcStrip.setFont(new Font("Tahoma", Font.PLAIN, 20));
@@ -160,8 +183,11 @@ public class Entrees_Screen {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				item_id = 608;
-				item_price = Combos_Screen.PriceQuery(item_id);
+				item_price = Query.PriceQuery(item_id);
 				//Add a meatloaf to the ticket
+				item_name = Query.ItemQuery(item_id);			
+				Table_Edit_Screen.InsertItem(table_id, item_name, item_price);
+				frmEntrees.dispose();
 			}
 		});
 		btnMeatloaf.setFont(new Font("Tahoma", Font.PLAIN, 20));
@@ -173,8 +199,11 @@ public class Entrees_Screen {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				item_id = 609;
-				item_price = Combos_Screen.PriceQuery(item_id);
+				item_price = Query.PriceQuery(item_id);
 				//Add a fettuccine Alfredo to the ticket
+				item_name = Query.ItemQuery(item_id);			
+				Table_Edit_Screen.InsertItem(table_id, item_name, item_price);
+				frmEntrees.dispose();
 			}
 		});
 		btnFettAlf.setFont(new Font("Tahoma", Font.PLAIN, 20));

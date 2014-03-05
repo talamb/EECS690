@@ -25,6 +25,8 @@ public static void ExecuteQuery(String query){
 		
 	
 	}
+
+
 	
 	public static ResultSet ExecuteResultSet(String query){
 		ResultSet rs = null;	
@@ -44,5 +46,24 @@ public static void ExecuteQuery(String query){
 		
 		
 	}
+	
+	
+	
+	public static void UpdateResultSet(String query){
+			
+		connection = Connection.con;
+		statement = Connection.stmt;
+		try{
+			statement = (Statement) ((java.sql.Connection) connection).createStatement();
+			statement.executeUpdate(query);			
+			
+		}catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
+
+		
+	}
+	
 	
 }

@@ -16,6 +16,8 @@ public class Drinks_Screen {
 	int item_id = 0;
 	double item_price = 0;
 	JFrame frmDrinks;
+	String item_name = "";
+	public static int table_id = 4;
 
 	/**
 	 * Launch the application.
@@ -69,8 +71,11 @@ public class Drinks_Screen {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				item_id = 901;
-				item_price = Combos_Screen.PriceQuery(item_id);
+				item_price = Query.PriceQuery(item_id);
 				//Add a soft drink to the ticket
+				item_name = Query.ItemQuery(item_id);			
+				Table_Edit_Screen.InsertItem(table_id, item_name, item_price);
+				frmDrinks.dispose();
 			}
 		});
 		btnSoftDrink.setFont(new Font("Tahoma", Font.PLAIN, 20));
@@ -82,8 +87,11 @@ public class Drinks_Screen {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				item_id = 902;
-				item_price = Combos_Screen.PriceQuery(item_id);
+				item_price = Query.PriceQuery(item_id);
 				//Add a coffee to the ticket
+				item_name = Query.ItemQuery(item_id);			
+				Table_Edit_Screen.InsertItem(table_id, item_name, item_price);
+				frmDrinks.dispose();
 			}
 		});
 		btnCoffee.setFont(new Font("Tahoma", Font.PLAIN, 20));
@@ -95,8 +103,11 @@ public class Drinks_Screen {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				item_id = 903;
-				item_price = Combos_Screen.PriceQuery(item_id);
+				item_price = Query.PriceQuery(item_id);
 				//Add hot tea to the ticket
+				item_name = Query.ItemQuery(item_id);			
+				Table_Edit_Screen.InsertItem(table_id, item_name, item_price);
+				frmDrinks.dispose();
 			}
 		});
 		btnHotTea.setFont(new Font("Tahoma", Font.PLAIN, 20));
@@ -108,8 +119,11 @@ public class Drinks_Screen {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				item_id = 904;
-				item_price = Combos_Screen.PriceQuery(item_id);
+				item_price = Query.PriceQuery(item_id);
 				//Add iced tea to the ticket
+				item_name = Query.ItemQuery(item_id);			
+				Table_Edit_Screen.InsertItem(table_id, item_name, item_price);
+				frmDrinks.dispose();
 			}
 		});
 		btnIcedTea.setFont(new Font("Tahoma", Font.PLAIN, 20));
@@ -121,8 +135,11 @@ public class Drinks_Screen {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				item_id = 905;
-				item_price = Combos_Screen.PriceQuery(item_id);
+				item_price = Query.PriceQuery(item_id);
 				//Add a small milk to the ticket
+				item_name = Query.ItemQuery(item_id);			
+				Table_Edit_Screen.InsertItem(table_id, item_name, item_price);
+				frmDrinks.dispose();
 			}
 		});
 		btnSmMilk.setFont(new Font("Tahoma", Font.PLAIN, 20));
@@ -134,8 +151,11 @@ public class Drinks_Screen {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				item_id = 905;
-				item_price = Combos_Screen.PriceQuery(item_id);
+				item_price = Query.PriceQuery(item_id);
 				// Add a large milk to the ticket
+				item_name = Query.ItemQuery(item_id);			
+				Table_Edit_Screen.InsertItem(table_id, item_name, item_price);
+				frmDrinks.dispose();
 			}
 		});
 		btnLgMilk.setFont(new Font("Tahoma", Font.PLAIN, 20));
@@ -147,8 +167,11 @@ public class Drinks_Screen {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				item_id = 906;
-				item_price = Combos_Screen.PriceQuery(item_id);
+				item_price = Query.PriceQuery(item_id);
 				// Add a small OJ to the ticket
+				item_name = Query.ItemQuery(item_id);			
+				Table_Edit_Screen.InsertItem(table_id, item_name, item_price);
+				frmDrinks.dispose();
 			}
 		});
 		btnSmOj.setFont(new Font("Tahoma", Font.PLAIN, 20));
@@ -160,8 +183,11 @@ public class Drinks_Screen {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				item_id = 906;
-				item_price = Combos_Screen.PriceQuery(item_id);
+				item_price = Query.PriceQuery(item_id);
 				// Add a large OJ to the ticket
+				item_name = Query.ItemQuery(item_id);			
+				Table_Edit_Screen.InsertItem(table_id, item_name, item_price);
+				frmDrinks.dispose();
 			}
 		});
 		btnLgOj.setFont(new Font("Tahoma", Font.PLAIN, 20));

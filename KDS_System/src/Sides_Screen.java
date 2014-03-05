@@ -17,6 +17,8 @@ public class Sides_Screen {
 	JFrame frmSides;
 	int item_id = 0;
 	double item_price = 0;
+	String item_name = "";
+	public static int table_id = 4;
 
 	/**
 	 * Launch the application.
@@ -70,8 +72,11 @@ public class Sides_Screen {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				item_id = 801;
-				item_price = Combos_Screen.PriceQuery(item_id);
+				item_price = Query.PriceQuery(item_id);
 				//Add hash browns to the ticket
+				item_name = Query.ItemQuery(item_id);			
+				Table_Edit_Screen.InsertItem(table_id, item_name, item_price);
+				frmSides.dispose();
 			}
 		});
 		btnHashBrowns.setFont(new Font("Tahoma", Font.PLAIN, 20));
@@ -83,8 +88,11 @@ public class Sides_Screen {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				item_id = 802;
-				item_price = Combos_Screen.PriceQuery(item_id);
+				item_price = Query.PriceQuery(item_id);
 				//Add a cinnamon roll to the ticket
+				item_name = Query.ItemQuery(item_id);			
+				Table_Edit_Screen.InsertItem(table_id, item_name, item_price);
+				frmSides.dispose();
 			}
 		});
 		btnCinnamonRoll.setFont(new Font("Tahoma", Font.PLAIN, 20));
@@ -96,8 +104,11 @@ public class Sides_Screen {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				item_id = 803;
-				item_price = Combos_Screen.PriceQuery(item_id);
+				item_price = Query.PriceQuery(item_id);
 				//Add bacon or sausage to the ticket
+				item_name = Query.ItemQuery(item_id);			
+				Table_Edit_Screen.InsertItem(table_id, item_name, item_price);
+				frmSides.dispose();
 			}
 			
 		});
@@ -110,8 +121,11 @@ public class Sides_Screen {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				item_id = 804;
-				item_price = Combos_Screen.PriceQuery(item_id);
+				item_price = Query.PriceQuery(item_id);
 				//Add Biscut n' Gravy to the ticket
+				item_name = Query.ItemQuery(item_id);			
+				Table_Edit_Screen.InsertItem(table_id, item_name, item_price);
+				frmSides.dispose();
 			}
 		});
 		btnBiscuitNGravy.setFont(new Font("Tahoma", Font.PLAIN, 20));
@@ -123,8 +137,11 @@ public class Sides_Screen {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				item_id = 805;
-				item_price = Combos_Screen.PriceQuery(item_id);
+				item_price = Query.PriceQuery(item_id);
 				//Add toast to the ticket
+				item_name = Query.ItemQuery(item_id);			
+				Table_Edit_Screen.InsertItem(table_id, item_name, item_price);
+				frmSides.dispose();
 			}
 		});
 		btnToast.setFont(new Font("Tahoma", Font.PLAIN, 20));

@@ -1,22 +1,39 @@
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
+
 import java.awt.Color;
 import java.awt.Toolkit;
+
 import javax.swing.JButton;
+
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+
+import javax.swing.DefaultListModel;
+import javax.swing.JOptionPane;
 import javax.swing.JTextPane;
 import javax.swing.JLabel;
 import javax.swing.SwingConstants;
+
 import java.awt.Font;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.text.DecimalFormat;
+
 import javax.swing.JTextField;
+import javax.swing.JList;
+import javax.swing.JScrollPane;
+import javax.swing.ListSelectionModel;
 
 
 public class Cashout_Screen {
 
 	JFrame frmCashoutTable;
 	private JTextField tipAmount;
+	public static DefaultListModel<Tickets> ticketListModel2;
+	public static int table_id = 4;
+	public static double total;
 
 	/**
 	 * Launch the application.
@@ -61,11 +78,6 @@ public class Cashout_Screen {
 		});
 		btnBack.setBounds(136, 0, 117, 25);
 		frmCashoutTable.getContentPane().add(btnBack);
-		
-		JTextPane textPane = new JTextPane();
-		textPane.setBackground(Color.LIGHT_GRAY);
-		textPane.setBounds(59, 84, 266, 194);
-		frmCashoutTable.getContentPane().add(textPane);
 		
 		JLabel lblTicket = new JLabel("Ticket");
 		lblTicket.setFont(new Font("Dialog", Font.BOLD, 20));
@@ -112,8 +124,52 @@ public class Cashout_Screen {
 		btnDiscount.setFont(new Font("Dialog", Font.BOLD, 20));
 		btnDiscount.setBounds(46, 494, 294, 47);
 		frmCashoutTable.getContentPane().add(btnDiscount);
+		
+		JScrollPane scrollPane = new JScrollPane();
+		scrollPane.setBounds(31, 83, 294, 196);
+		frmCashoutTable.getContentPane().add(scrollPane);
+		
+		JList<Tickets> list = new JList<Tickets>();
+		scrollPane.setViewportView(list);
+		list.setSelectionMode(ListSelectionModel.SINGLE_INTERVAL_SELECTION);
+		list.setModel(Table_Edit_Screen.ticketListModel);
+		
+		
 		frmCashoutTable.setTitle("Cashout Table");
 		frmCashoutTable.setBounds(100, 100, 400, 600);
 		frmCashoutTable.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		GetTotal();
+		String tmp = new DecimalFormat("#.##").format(total);
+		//String tmp = String.valueOf(total2);
+		textPane_1.setText(tmp);
+		
+	
 	}
+	
+	public static void GetTotal()
+	{
+		String commandText = "SELECT * from tableorders WHERE ID = " + table_id;
+		ResultSet rs = SQL.ExecuteResultSet(commandText); 
+		double tmpprice = 0;
+		
+		try {
+			while ((rs!=null) && (rs.next()))
+			{			
+				
+				tmpprice = rs.getDouble("price");
+				total = tmpprice + total;
+				
+				
+			}
+		}
+		catch (SQLException e)
+		{
+			JOptionPane.showMessageDialog(null, e.toString());
+		}
+		
+		total = total + (total *.08);
+		
+	}
+	
+	
 }

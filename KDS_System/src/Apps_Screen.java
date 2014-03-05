@@ -13,6 +13,8 @@ import java.awt.Color;
 public class Apps_Screen {
 	int item_id = 0;
 	double item_price = 0;
+	String item_name = "";
+	public static int table_id = 4;
 	JFrame frmAppetizers;
 
 	/**
@@ -67,8 +69,11 @@ public class Apps_Screen {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				item_id = 101;
-				item_price = Combos_Screen.PriceQuery(item_id);
+				item_price = Query.PriceQuery(item_id);
 				//Add Spin dip to ticket
+				item_name = Query.ItemQuery(item_id);			
+				Table_Edit_Screen.InsertItem(table_id, item_name, item_price);
+				frmAppetizers.dispose();
 				
 			}
 		});
@@ -81,8 +86,11 @@ public class Apps_Screen {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				item_id = 102;
-				item_price = Combos_Screen.PriceQuery(item_id);
+				item_price = Query.PriceQuery(item_id);
 				//Add mozz sticks to ticket
+				item_name = Query.ItemQuery(item_id);			
+				Table_Edit_Screen.InsertItem(table_id, item_name, item_price);
+				frmAppetizers.dispose();
 			}
 		});
 		btnMozzSticks.setFont(new Font("Tahoma", Font.PLAIN, 20));
@@ -94,8 +102,11 @@ public class Apps_Screen {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				item_id = 103;
-				item_price = Combos_Screen.PriceQuery(item_id);
+				item_price = Query.PriceQuery(item_id);
 				//Add chicken fingers to ticket
+				item_name = Query.ItemQuery(item_id);			
+				Table_Edit_Screen.InsertItem(table_id, item_name, item_price);
+				frmAppetizers.dispose();
 			}
 		});
 		btnChicFing.setFont(new Font("Tahoma", Font.PLAIN, 20));

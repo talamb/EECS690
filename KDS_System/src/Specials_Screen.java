@@ -17,6 +17,8 @@ public class Specials_Screen {
 	JFrame frmSpecialties;
 	int item_id = 0;
 	double item_price = 0;
+	String item_name = "";
+	public static int table_id = 4;
 	/**
 	 * Launch the application.
 	 */
@@ -69,8 +71,11 @@ public class Specials_Screen {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				item_id = 701;
-				item_price = Combos_Screen.PriceQuery(item_id);
+				item_price = Query.PriceQuery(item_id);
 				//Add the express to the ticket
+				item_name = Query.ItemQuery(item_id);			
+				Table_Edit_Screen.InsertItem(table_id, item_name, item_price);
+				frmSpecialties.dispose();
 			}
 		});
 		btnExpress.setFont(new Font("Tahoma", Font.PLAIN, 20));
@@ -82,8 +87,11 @@ public class Specials_Screen {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				item_id = 702;
-				item_price = Combos_Screen.PriceQuery(item_id);
+				item_price = Query.PriceQuery(item_id);
 				//Add french toast to the ticket.
+				item_name = Query.ItemQuery(item_id);			
+				Table_Edit_Screen.InsertItem(table_id, item_name, item_price);
+				frmSpecialties.dispose();
 			}
 		});
 		btnFreToast.setFont(new Font("Tahoma", Font.PLAIN, 20));
@@ -95,8 +103,11 @@ public class Specials_Screen {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				item_id = 703;
-				item_price = Combos_Screen.PriceQuery(item_id);
+				item_price = Query.PriceQuery(item_id);
 				//Add the early bird to the ticket
+				item_name = Query.ItemQuery(item_id);			
+				Table_Edit_Screen.InsertItem(table_id, item_name, item_price);
+				frmSpecialties.dispose();
 			}
 		});
 		btnEarlyBird.setFont(new Font("Tahoma", Font.PLAIN, 20));
@@ -108,8 +119,11 @@ public class Specials_Screen {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				item_id = 706;
-				item_price = Combos_Screen.PriceQuery(item_id);
+				item_price = Query.PriceQuery(item_id);
 				//Add belgian waffles to the ticket
+				item_name = Query.ItemQuery(item_id);			
+				Table_Edit_Screen.InsertItem(table_id, item_name, item_price);
+				frmSpecialties.dispose();
 			}
 		});
 		btnBelgianW.setFont(new Font("Tahoma", Font.PLAIN, 20));
@@ -121,8 +135,11 @@ public class Specials_Screen {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				item_id = 705;
-				item_price = Combos_Screen.PriceQuery(item_id);
+				item_price = Query.PriceQuery(item_id);
 				//Add biscuits and gravy to the ticket
+				item_name = Query.ItemQuery(item_id);			
+				Table_Edit_Screen.InsertItem(table_id, item_name, item_price);
+				frmSpecialties.dispose();
 			}
 		});
 		btnBiscNGrav.setFont(new Font("Tahoma", Font.PLAIN, 20));
@@ -134,8 +151,11 @@ public class Specials_Screen {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				item_id = 704;
-				item_price = Combos_Screen.PriceQuery(item_id);
+				item_price = Query.PriceQuery(item_id);
 				//Add the triple stack to the ticket.
+				item_name = Query.ItemQuery(item_id);			
+				Table_Edit_Screen.InsertItem(table_id, item_name, item_price);
+				frmSpecialties.dispose();
 			}
 		});
 		btnTripleStack.setFont(new Font("Tahoma", Font.PLAIN, 20));
@@ -147,8 +167,11 @@ public class Specials_Screen {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				item_id = 707;
-				item_price = Combos_Screen.PriceQuery(item_id);
+				item_price = Query.PriceQuery(item_id);
 				//Add a half waffle combo to the ticket
+				item_name = Query.ItemQuery(item_id);			
+				Table_Edit_Screen.InsertItem(table_id, item_name, item_price);
+				frmSpecialties.dispose();
 			}
 		});
 		btnHalfWCombo.setFont(new Font("Tahoma", Font.PLAIN, 20));

@@ -4,6 +4,8 @@ import javax.swing.JFrame;
 
 import java.awt.Toolkit;
 
+import javax.swing.DefaultListModel;
+import javax.swing.JList;
 import javax.swing.JOptionPane;
 import javax.swing.JScrollPane;
 import javax.swing.JLabel;
@@ -16,11 +18,17 @@ import java.awt.Color;
 import java.awt.SystemColor;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+import javax.swing.ListSelectionModel;
 
 
 public class Table_Edit_Screen {
 	JFrame frmTableEdit;
-
+	public static JList<Tickets> ticketList;
+	public static DefaultListModel<Tickets> ticketListModel;
+	public static int ID = 4;
 	/**
 	 * Launch the application.
 	 */
@@ -34,7 +42,8 @@ public class Table_Edit_Screen {
 				{
 				try {
 					Table_Edit_Screen window = new Table_Edit_Screen();
-					window.frmTableEdit.setVisible(false);
+					window.frmTableEdit.setVisible(true);
+					
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -48,6 +57,7 @@ public class Table_Edit_Screen {
 	 */
 	public Table_Edit_Screen() {
 		initialize();
+		
 	}
 
 	/**
@@ -65,6 +75,10 @@ public class Table_Edit_Screen {
 		JScrollPane scrollPane = new JScrollPane();
 		scrollPane.setBounds(29, 108, 268, 379);
 		frmTableEdit.getContentPane().add(scrollPane);		
+		
+		ticketList = new JList<Tickets>();
+		ticketList.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
+		scrollPane.setViewportView(ticketList);
 		JLabel lblCurrentTicket = new JLabel("Current Ticket:");
 		lblCurrentTicket.setFont(new Font("Tahoma", Font.BOLD, 20));
 		lblCurrentTicket.setBounds(70, 52, 186, 45);
@@ -255,8 +269,62 @@ public class Table_Edit_Screen {
 		frmTableEdit.getContentPane().add(btnCashout);
 		
 		JButton btnEditRemove = new JButton("Edit / Remove");
+		btnEditRemove.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent arg0) {
+				RemoveFromTicket();
+			}
+		});
 		btnEditRemove.setFont(new Font("Tahoma", Font.PLAIN, 20));
 		btnEditRemove.setBounds(78, 498, 178, 49);
 		frmTableEdit.getContentPane().add(btnEditRemove);
+		PopulateTicket(4);
 	}
+
+public static void RemoveFromTicket()
+{
+	Tickets tmp = ticketList.getSelectedValue();
+	String name = tmp.getitem();
+	String commandText = "DELETE FROM tableorders WHERE Item = " + "'" + name + "' LIMIT 1";
+	SQL.UpdateResultSet(commandText);
+	PopulateTicket(ID);
+}
+
+public static void InsertItem(int table_ID, String item_name, double item_price)
+{
+	String commandText = "INSERT INTO tableorders (ID,Item,Price)" +
+			"VALUES ('" + table_ID + "', '" +
+			item_name + "', '" + item_price +
+			"')";
+	SQL.UpdateResultSet(commandText);
+	PopulateTicket(ID);
+	
+}
+
+public static void PopulateTicket(int ID)
+{
+	ticketListModel = new DefaultListModel<Tickets>();
+	String commandText = "SELECT * from tableorders WHERE ID = " + ID;
+	ResultSet rs = SQL.ExecuteResultSet(commandText); 
+	double price = 0;
+	String name = "";
+	try {
+		while ((rs!=null) && (rs.next()))
+		{			
+			name = rs.getString("Item");
+			price = rs.getDouble("price");
+			Tickets tick = new Tickets(name,price);			
+			ticketListModel.addElement(tick);
+			
+		}
+	}
+	catch (SQLException e)
+	{
+		JOptionPane.showMessageDialog(null, e.toString());
+	}
+	
+	ticketList.setModel(ticketListModel);
+	
+	
+}
 }

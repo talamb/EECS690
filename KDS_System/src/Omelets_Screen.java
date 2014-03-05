@@ -17,6 +17,8 @@ public class Omelets_Screen {
 	JFrame frmOmelets;
 	int item_id = 0;
 	double item_price = 0;
+	String item_name = "";
+	public static int table_id = 4;
 
 	/**
 	 * Launch the application.
@@ -71,8 +73,11 @@ public class Omelets_Screen {
 			public void mouseClicked(MouseEvent e) {
 				
 				item_id = 711;
-				item_price = Combos_Screen.PriceQuery(item_id);
+				item_price = Query.PriceQuery(item_id);
 				//Add Denver omelet to the ticket
+				item_name = Query.ItemQuery(item_id);			
+				Table_Edit_Screen.InsertItem(table_id, item_name, item_price);
+				frmOmelets.dispose();
 			}
 		});
 		btnDenverOmelet.setFont(new Font("Tahoma", Font.PLAIN, 20));
@@ -84,8 +89,11 @@ public class Omelets_Screen {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				item_id = 712;
-				item_price = Combos_Screen.PriceQuery(item_id);
+				item_price = Query.PriceQuery(item_id);
 				//Add Cheese Omelet to the ticket
+				item_name = Query.ItemQuery(item_id);			
+				Table_Edit_Screen.InsertItem(table_id, item_name, item_price);
+				frmOmelets.dispose();
 			}
 		});
 		btnCheeseOmelet.setToolTipText("Omelette du fromage!");
@@ -98,8 +106,11 @@ public class Omelets_Screen {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				item_id = 713;
-				item_price = Combos_Screen.PriceQuery(item_id);
+				item_price = Query.PriceQuery(item_id);
 				//Add Veggie Omelet to the ticket
+				item_name = Query.ItemQuery(item_id);			
+				Table_Edit_Screen.InsertItem(table_id, item_name, item_price);
+				frmOmelets.dispose();
 			}
 		});
 		btnVeggieOmelet.setFont(new Font("Tahoma", Font.PLAIN, 20));
@@ -111,8 +122,11 @@ public class Omelets_Screen {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				item_id = 714;
-				item_price = Combos_Screen.PriceQuery(item_id);
+				item_price = Query.PriceQuery(item_id);
 				//Add Southwest Omelet to the ticket
+				item_name = Query.ItemQuery(item_id);			
+				Table_Edit_Screen.InsertItem(table_id, item_name, item_price);
+				frmOmelets.dispose();
 			}
 		});
 		btnSouthwestOmelet.setFont(new Font("Tahoma", Font.PLAIN, 20));

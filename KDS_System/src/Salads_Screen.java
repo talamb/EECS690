@@ -16,6 +16,8 @@ public class Salads_Screen {
 	JFrame frmSalads;
 	int item_id = 0;
 	double item_price = 0;
+	String item_name = "";
+	public static int table_id = 4;
 	/**
 	 * Launch the application.
 	 */
@@ -68,8 +70,11 @@ public class Salads_Screen {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				item_id = 201;
-				item_price = Combos_Screen.PriceQuery(item_id);
+				item_price = Query.PriceQuery(item_id);
 				//Add Chicken Strip Salad to ticket
+				item_name = Query.ItemQuery(item_id);			
+				Table_Edit_Screen.InsertItem(table_id, item_name, item_price);
+				frmSalads.dispose();
 			}
 		});
 		btnNewButton.setFont(new Font("Tahoma", Font.PLAIN, 20));
@@ -81,8 +86,11 @@ public class Salads_Screen {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				item_id = 202;
-				item_price = Combos_Screen.PriceQuery(item_id);
+				item_price = Query.PriceQuery(item_id);
 				//Add Chef Salad to ticket
+				item_name = Query.ItemQuery(item_id);			
+				Table_Edit_Screen.InsertItem(table_id, item_name, item_price);
+				frmSalads.dispose();
 			}
 		});
 		btnChefSalad.setFont(new Font("Tahoma", Font.PLAIN, 20));
@@ -94,8 +102,11 @@ public class Salads_Screen {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				item_id = 203;
-				item_price = Combos_Screen.PriceQuery(item_id);
+				item_price = Query.PriceQuery(item_id);
 				//Add ceaser salad to ticket
+				item_name = Query.ItemQuery(item_id);			
+				Table_Edit_Screen.InsertItem(table_id, item_name, item_price);
+				frmSalads.dispose();
 			}
 		});
 		btnCeaserSalad.setFont(new Font("Tahoma", Font.PLAIN, 20));
@@ -107,8 +118,11 @@ public class Salads_Screen {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				item_id = 204;
-				item_price = Combos_Screen.PriceQuery(item_id);
+				item_price = Query.PriceQuery(item_id);
 				//Add side salad to ticket
+				item_name = Query.ItemQuery(item_id);			
+				Table_Edit_Screen.InsertItem(table_id, item_name, item_price);
+				frmSalads.dispose();
 			}
 		});
 		btnSideSalad.setFont(new Font("Tahoma", Font.PLAIN, 20));
