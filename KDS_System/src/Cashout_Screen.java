@@ -107,17 +107,17 @@ public class Cashout_Screen {
 		
 		JButton btnCash = new JButton("Cash");
 		btnCash.setFont(new Font("Dialog", Font.BOLD, 20));
-		btnCash.setBounds(12, 409, 117, 47);
+		btnCash.setBounds(10, 409, 117, 47);
 		frmCashoutTable.getContentPane().add(btnCash);
 		
 		JButton btnCc = new JButton("CC");
 		btnCc.setFont(new Font("Dialog", Font.BOLD, 20));
-		btnCc.setBounds(140, 409, 117, 47);
+		btnCc.setBounds(136, 409, 117, 47);
 		frmCashoutTable.getContentPane().add(btnCc);
 		
 		JButton btnCheck = new JButton("Check");
 		btnCheck.setFont(new Font("Dialog", Font.BOLD, 20));
-		btnCheck.setBounds(269, 409, 117, 47);
+		btnCheck.setBounds(260, 409, 117, 47);
 		frmCashoutTable.getContentPane().add(btnCheck);
 		
 		JButton btnDiscount = new JButton("Discount");

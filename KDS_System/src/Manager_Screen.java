@@ -151,6 +151,26 @@ public class Manager_Screen {
 		lblNewLabel_1.setForeground(Color.RED);
 		lblNewLabel_1.setBounds(570, 28, 90, 33);
 		frmManagerMain.getContentPane().add(lblNewLabel_1);
+		
+		JButton btnCashoutParty = new JButton("Cashout Party");
+		btnCashoutParty.setFont(new Font("Dialog", Font.BOLD, 20));
+		btnCashoutParty.setBounds(297, 277, 205, 113);
+		frmManagerMain.getContentPane().add(btnCashoutParty);
+		
+		JButton btnReserveTables = new JButton("Reserve Tables");
+		btnReserveTables.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent arg0) {
+				
+				
+				Reservation_Screen Reservation_GUI_Instance = new Reservation_Screen();
+				Reservation_GUI_Instance.frmReserveMain.setVisible(true);
+				
+			}
+		});
+		btnReserveTables.setFont(new Font("Dialog", Font.BOLD, 20));
+		btnReserveTables.setBounds(297, 138, 205, 113);
+		frmManagerMain.getContentPane().add(btnReserveTables);
 	}
 	
 	//This method will restart the loging screen and destory this instance of the manager screen
