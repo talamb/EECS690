@@ -29,7 +29,7 @@ public class Login_Screen {
 	private JTextField Pin_Field;
 	private JTextField ID_Field;
 	public static String EmployeeName;
-	
+	public static int ID2;
 	
 	//Test logins for ...testing
 	//int test_ID_1 = 1234;
@@ -151,7 +151,7 @@ public class Login_Screen {
 		
 		// TODO Add error checking if the fields are blank
 		int ID = Integer.valueOf(ID_Field.getText());
-		int ID2 = -1;
+		ID2 = -1;
 		int PIN = Integer.valueOf(Pin_Field.getText());
 		int Pin2 = -1;
 		int manager = -1;

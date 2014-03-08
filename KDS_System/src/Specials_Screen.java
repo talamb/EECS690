@@ -18,7 +18,7 @@ public class Specials_Screen {
 	int item_id = 0;
 	double item_price = 0;
 	String item_name = "";
-	public static int table_id = 4;
+	
 	/**
 	 * Launch the application.
 	 */
@@ -74,7 +74,7 @@ public class Specials_Screen {
 				item_price = Query.PriceQuery(item_id);
 				//Add the express to the ticket
 				item_name = Query.ItemQuery(item_id);			
-				Table_Edit_Screen.InsertItem(table_id, item_name, item_price);
+				Table_Edit_Screen.InsertItem(Server_Screen.tableID, item_name, item_price);
 				frmSpecialties.dispose();
 			}
 		});
@@ -90,7 +90,7 @@ public class Specials_Screen {
 				item_price = Query.PriceQuery(item_id);
 				//Add french toast to the ticket.
 				item_name = Query.ItemQuery(item_id);			
-				Table_Edit_Screen.InsertItem(table_id, item_name, item_price);
+				Table_Edit_Screen.InsertItem(Server_Screen.tableID, item_name, item_price);
 				frmSpecialties.dispose();
 			}
 		});
@@ -106,7 +106,7 @@ public class Specials_Screen {
 				item_price = Query.PriceQuery(item_id);
 				//Add the early bird to the ticket
 				item_name = Query.ItemQuery(item_id);			
-				Table_Edit_Screen.InsertItem(table_id, item_name, item_price);
+				Table_Edit_Screen.InsertItem(Server_Screen.tableID, item_name, item_price);
 				frmSpecialties.dispose();
 			}
 		});
@@ -122,7 +122,7 @@ public class Specials_Screen {
 				item_price = Query.PriceQuery(item_id);
 				//Add belgian waffles to the ticket
 				item_name = Query.ItemQuery(item_id);			
-				Table_Edit_Screen.InsertItem(table_id, item_name, item_price);
+				Table_Edit_Screen.InsertItem(Server_Screen.tableID, item_name, item_price);
 				frmSpecialties.dispose();
 			}
 		});
@@ -138,7 +138,7 @@ public class Specials_Screen {
 				item_price = Query.PriceQuery(item_id);
 				//Add biscuits and gravy to the ticket
 				item_name = Query.ItemQuery(item_id);			
-				Table_Edit_Screen.InsertItem(table_id, item_name, item_price);
+				Table_Edit_Screen.InsertItem(Server_Screen.tableID, item_name, item_price);
 				frmSpecialties.dispose();
 			}
 		});
@@ -154,7 +154,7 @@ public class Specials_Screen {
 				item_price = Query.PriceQuery(item_id);
 				//Add the triple stack to the ticket.
 				item_name = Query.ItemQuery(item_id);			
-				Table_Edit_Screen.InsertItem(table_id, item_name, item_price);
+				Table_Edit_Screen.InsertItem(Server_Screen.tableID, item_name, item_price);
 				frmSpecialties.dispose();
 			}
 		});
@@ -170,7 +170,7 @@ public class Specials_Screen {
 				item_price = Query.PriceQuery(item_id);
 				//Add a half waffle combo to the ticket
 				item_name = Query.ItemQuery(item_id);			
-				Table_Edit_Screen.InsertItem(table_id, item_name, item_price);
+				Table_Edit_Screen.InsertItem(Server_Screen.tableID, item_name, item_price);
 				frmSpecialties.dispose();
 			}
 		});

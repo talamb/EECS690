@@ -15,8 +15,7 @@ import java.awt.Color;
 public class Combos_Screen {
 	int item_id = -1;
 	double item_price = -1;
-	String item_name = "";
-	public static int table_id = 4;
+	String item_name = "";	
 	JFrame frmCombinations;
 
 	/**
@@ -74,7 +73,7 @@ public class Combos_Screen {
 				item_price = Query.PriceQuery(item_id);				
 				//Add a bacon or sausage and eggs to the ticket
 				item_name = Query.ItemQuery(item_id);			
-				Table_Edit_Screen.InsertItem(table_id, item_name, item_price);
+				Table_Edit_Screen.InsertItem(Server_Screen.tableID, item_name, item_price);
 				frmCombinations.dispose();
 			}
 		});
@@ -90,7 +89,7 @@ public class Combos_Screen {
 				item_price = Query.PriceQuery(item_id);
 				//Add a ham and eggs to the ticket
 				item_name = Query.ItemQuery(item_id);			
-				Table_Edit_Screen.InsertItem(table_id, item_name, item_price);
+				Table_Edit_Screen.InsertItem(Server_Screen.tableID, item_name, item_price);
 				frmCombinations.dispose();
 			}
 		});
@@ -106,7 +105,7 @@ public class Combos_Screen {
 				item_price = Query.PriceQuery(item_id);
 				//Add a steak and eggs to the ticket
 				item_name = Query.ItemQuery(item_id);			
-				Table_Edit_Screen.InsertItem(table_id, item_name, item_price);
+				Table_Edit_Screen.InsertItem(Server_Screen.tableID, item_name, item_price);
 				frmCombinations.dispose();
 			}
 		});

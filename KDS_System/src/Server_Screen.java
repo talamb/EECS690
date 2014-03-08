@@ -13,9 +13,6 @@ import javax.swing.SwingConstants;
 
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-
 import javax.swing.UIManager;
 
 
@@ -63,8 +60,8 @@ public class Server_Screen {
 		table25btn.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				
-				checkIfTableExsists(25);
+				tableID = 25;
+				checkIfTableExsists();
 			}
 		});
 		table25btn.setHorizontalAlignment(SwingConstants.LEFT);
@@ -77,8 +74,8 @@ public class Server_Screen {
 		table24btn.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				
-				checkIfTableExsists(24);
+				tableID = 24;
+				checkIfTableExsists();
 			}
 		});
 		table24btn.setHorizontalAlignment(SwingConstants.LEFT);
@@ -91,8 +88,8 @@ public class Server_Screen {
 		table23btn.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				
-				checkIfTableExsists(23);
+				tableID = 23;
+				checkIfTableExsists();
 			}
 		});
 		table23btn.setHorizontalAlignment(SwingConstants.LEFT);
@@ -105,8 +102,8 @@ public class Server_Screen {
 		table22btn.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				
-				checkIfTableExsists(22);
+				tableID = 22;
+				checkIfTableExsists();
 			}
 		});
 		table22btn.setHorizontalAlignment(SwingConstants.LEFT);
@@ -119,8 +116,8 @@ public class Server_Screen {
 		table21btn.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				
-				checkIfTableExsists(21);
+				tableID = 21;
+				checkIfTableExsists();
 			}
 		});
 		table21btn.setFont(new Font("Tahoma", Font.PLAIN, 10));
@@ -133,8 +130,8 @@ public class Server_Screen {
 		table20btn.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				
-				checkIfTableExsists(20);
+				tableID = 20;
+				checkIfTableExsists();
 			}
 		});
 		table20btn.setBounds(540, 448, 53, 51);
@@ -144,8 +141,8 @@ public class Server_Screen {
 		table19btn.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				
-				checkIfTableExsists(19);
+				tableID = 19;
+				checkIfTableExsists();
 			}
 		});
 		table19btn.setBounds(540, 268, 53, 51);
@@ -155,8 +152,8 @@ public class Server_Screen {
 		table18btn.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				
-				checkIfTableExsists(18);
+				tableID = 18;
+				checkIfTableExsists();
 			}
 		});
 		table18btn.setBounds(540, 93, 53, 51);
@@ -166,8 +163,8 @@ public class Server_Screen {
 		table17btn.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				
-				checkIfTableExsists(17);
+				tableID = 17; 
+				checkIfTableExsists();
 			}
 		});
 		table17btn.setBounds(457, 448, 53, 51);
@@ -177,8 +174,8 @@ public class Server_Screen {
 		table16btn.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				
-				checkIfTableExsists(16);
+				tableID = 16;
+				checkIfTableExsists();
 			}
 		});
 		table16btn.setBounds(457, 268, 53, 51);
@@ -188,8 +185,8 @@ public class Server_Screen {
 		table15btn.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				
-				checkIfTableExsists(15);
+				tableID = 15;
+				checkIfTableExsists();
 			}
 		});
 		table15btn.setBounds(457, 93, 53, 51);
@@ -199,8 +196,8 @@ public class Server_Screen {
 		table14btn.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				
-				checkIfTableExsists(14);
+				tableID = 14;
+				checkIfTableExsists();
 			}
 		});
 		table14btn.setBounds(374, 448, 53, 51);
@@ -210,8 +207,8 @@ public class Server_Screen {
 		table13btn.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				
-				checkIfTableExsists(13);
+				tableID = 13;
+				checkIfTableExsists();
 			}
 		});
 		table13btn.setBounds(375, 268, 53, 51);
@@ -221,8 +218,8 @@ public class Server_Screen {
 		table12btn.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				
-				checkIfTableExsists(12);
+				tableID = 12;
+				checkIfTableExsists();
 			}
 		});
 		table12btn.setBounds(370, 93, 52, 51);
@@ -232,8 +229,8 @@ public class Server_Screen {
 		table11btn.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				
-				checkIfTableExsists(11);
+				tableID = 11;
+				checkIfTableExsists();
 			}
 		});
 		table11btn.setBounds(285, 448, 53, 51);
@@ -243,8 +240,8 @@ public class Server_Screen {
 		table10btn.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				
-				checkIfTableExsists(10);
+				tableID = 10;
+				checkIfTableExsists();
 			}
 		});
 		table10btn.setBounds(285, 269, 53, 51);
@@ -254,8 +251,8 @@ public class Server_Screen {
 		table9btn.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				
-				checkIfTableExsists(9);
+				tableID = 9;
+				checkIfTableExsists();
 			}
 		});
 		table9btn.setBounds(290, 92, 48, 51);
@@ -265,8 +262,8 @@ public class Server_Screen {
 		table8btn.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				
-				checkIfTableExsists(8);
+				tableID = 8;
+				checkIfTableExsists();
 			}
 		});
 		table8btn.setBounds(210, 448, 48, 51);
@@ -276,8 +273,8 @@ public class Server_Screen {
 		table7btn.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				
-				checkIfTableExsists(7);
+				tableID = 7;
+				checkIfTableExsists();
 			}
 		});
 		table7btn.setBounds(210, 269, 48, 51);
@@ -287,8 +284,8 @@ public class Server_Screen {
 		table6btn.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				
-				checkIfTableExsists(6);
+				tableID = 6;
+				checkIfTableExsists();
 			}
 		});
 		table6btn.setBounds(210, 93, 48, 51);
@@ -299,8 +296,8 @@ public class Server_Screen {
 		table5btn.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				
-				checkIfTableExsists(5);
+				tableID = 5;
+				checkIfTableExsists();
 			}
 		});
 		table5btn.setBackground(UIManager.getColor("Button.background"));
@@ -312,8 +309,8 @@ public class Server_Screen {
 		table4btn.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				
-				checkIfTableExsists(4);
+				tableID = 4;
+				checkIfTableExsists();
 			}
 		});
 		table4btn.setBackground(UIManager.getColor("Button.background"));
@@ -325,9 +322,8 @@ public class Server_Screen {
 		table3btn.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				//Combos_Screen Combo_GUI_INSTANCE = new Combos_Screen();
-				//Combo_GUI_INSTANCE.frmCombinations.setVisible(true);				
-				checkIfTableExsists(3);
+				tableID = 3; 
+				checkIfTableExsists();
 			}
 		});
 		table3btn.setBackground(UIManager.getColor("Button.background"));
@@ -339,8 +335,8 @@ public class Server_Screen {
 		table2btn.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				
-				checkIfTableExsists(2);
+				tableID = 2;
+				checkIfTableExsists();
 			}
 		});
 		table2btn.setBackground(UIManager.getColor("Button.background"));
@@ -352,8 +348,8 @@ public class Server_Screen {
 		table1btn.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				
-				checkIfTableExsists(1);
+				tableID = 1;
+				checkIfTableExsists();
 			}
 		});
 		table1btn.setBackground(UIManager.getColor("Button.background"));
@@ -413,41 +409,10 @@ public class Server_Screen {
 
 	//This method will check to see if the table already exists locally and either create it or
 	//pull it's data as needed
-	protected void checkIfTableExsists(int i) {
-		// TODO Auto-generated method stub
-		String commandText = "SELECT * from TableOrders WHERE ID = " + i;
-		ResultSet rs;
-		int tableExists = 0;
-		try{
-			//Execute command
-			rs = SQL.ExecuteResultSet(commandText); 
-		
-			while (rs.next()) {
-				tableExists = rs.getInt("ID");
-			}
-		}
-		catch (SQLException e) {
-			System.out.println(e.getMessage());
-		}
-		//If value is 0 table does not exist
-		if(tableExists == 0 )
-		{
-			//CreateTableOrder()??
-			System.out.println("Table does not exist");
-			
-			//**********Test code we'll need to make sure this is pulling the correct data in the release**********
-			//Go to the table edit screen for now
-			
-			Table_Edit_Screen Table_GUI_Instance = new Table_Edit_Screen();
-			Table_GUI_Instance.frmTableEdit.setVisible(true);	
-			
-		}
-		else
-		{
-			tableID = i; //set tableID for use in table edit screen.
-		
-		}
-		//Once we have a table selected we can call table_edit_screen with it's current information
-		
+	public void checkIfTableExsists() {
+		Table_Edit_Screen Table_GUI_Instance = new Table_Edit_Screen();
+		Table_GUI_Instance.frmTableEdit.setVisible(true);
 	}
+		
+		
 }

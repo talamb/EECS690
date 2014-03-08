@@ -18,7 +18,7 @@ public class Sides_Screen {
 	int item_id = 0;
 	double item_price = 0;
 	String item_name = "";
-	public static int table_id = 4;
+	
 
 	/**
 	 * Launch the application.
@@ -75,7 +75,7 @@ public class Sides_Screen {
 				item_price = Query.PriceQuery(item_id);
 				//Add hash browns to the ticket
 				item_name = Query.ItemQuery(item_id);			
-				Table_Edit_Screen.InsertItem(table_id, item_name, item_price);
+				Table_Edit_Screen.InsertItem(Server_Screen.tableID, item_name, item_price);
 				frmSides.dispose();
 			}
 		});
@@ -91,7 +91,7 @@ public class Sides_Screen {
 				item_price = Query.PriceQuery(item_id);
 				//Add a cinnamon roll to the ticket
 				item_name = Query.ItemQuery(item_id);			
-				Table_Edit_Screen.InsertItem(table_id, item_name, item_price);
+				Table_Edit_Screen.InsertItem(Server_Screen.tableID, item_name, item_price);
 				frmSides.dispose();
 			}
 		});
@@ -107,7 +107,7 @@ public class Sides_Screen {
 				item_price = Query.PriceQuery(item_id);
 				//Add bacon or sausage to the ticket
 				item_name = Query.ItemQuery(item_id);			
-				Table_Edit_Screen.InsertItem(table_id, item_name, item_price);
+				Table_Edit_Screen.InsertItem(Server_Screen.tableID, item_name, item_price);
 				frmSides.dispose();
 			}
 			
@@ -124,7 +124,7 @@ public class Sides_Screen {
 				item_price = Query.PriceQuery(item_id);
 				//Add Biscut n' Gravy to the ticket
 				item_name = Query.ItemQuery(item_id);			
-				Table_Edit_Screen.InsertItem(table_id, item_name, item_price);
+				Table_Edit_Screen.InsertItem(Server_Screen.tableID, item_name, item_price);
 				frmSides.dispose();
 			}
 		});
@@ -140,7 +140,7 @@ public class Sides_Screen {
 				item_price = Query.PriceQuery(item_id);
 				//Add toast to the ticket
 				item_name = Query.ItemQuery(item_id);			
-				Table_Edit_Screen.InsertItem(table_id, item_name, item_price);
+				Table_Edit_Screen.InsertItem(Server_Screen.tableID, item_name, item_price);
 				frmSides.dispose();
 			}
 		});

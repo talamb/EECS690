@@ -28,7 +28,7 @@ public class Table_Edit_Screen {
 	JFrame frmTableEdit;
 	public static JList<Tickets> ticketList;
 	public static DefaultListModel<Tickets> ticketListModel;
-	public static int ID = 4;
+	
 	/**
 	 * Launch the application.
 	 */
@@ -42,7 +42,7 @@ public class Table_Edit_Screen {
 				{
 				try {
 					Table_Edit_Screen window = new Table_Edit_Screen();
-					window.frmTableEdit.setVisible(true);
+					window.frmTableEdit.setVisible(false);
 					
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -239,13 +239,8 @@ public class Table_Edit_Screen {
 		JButton btnBackToTables = new JButton("Back to Tables");
 		btnBackToTables.addMouseListener(new MouseAdapter() {
 			@Override
-			public void mouseClicked(MouseEvent e) {
-				
-				//*****************************************
-				//         Save Table Data Here ?
-				//*****************************************
-				
-				
+			public void mouseClicked(MouseEvent e) {			
+
 				frmTableEdit.dispose();
 			}
 		});
@@ -265,7 +260,7 @@ public class Table_Edit_Screen {
 			}
 		});
 		btnCashout.setFont(new Font("Tahoma", Font.PLAIN, 20));
-		btnCashout.setBounds(452, 490, 152, 61);
+		btnCashout.setBounds(378, 490, 152, 61);
 		frmTableEdit.getContentPane().add(btnCashout);
 		
 		JButton btnEditRemove = new JButton("Edit / Remove");
@@ -278,7 +273,19 @@ public class Table_Edit_Screen {
 		btnEditRemove.setFont(new Font("Tahoma", Font.PLAIN, 20));
 		btnEditRemove.setBounds(78, 498, 178, 49);
 		frmTableEdit.getContentPane().add(btnEditRemove);
-		PopulateTicket(4);
+		
+		JButton SplitCheck = new JButton("Split Check");
+		SplitCheck.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				Split_Check Split_Check_GUI_Instance = new Split_Check();
+				Split_Check_GUI_Instance.frmTableEditSplit.setVisible(true);;
+			}
+		});
+		SplitCheck.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		SplitCheck.setBounds(540, 490, 152, 61);
+		frmTableEdit.getContentPane().add(SplitCheck);
+		PopulateTicket(Server_Screen.tableID);
 	}
 
 public static void RemoveFromTicket()
@@ -287,7 +294,7 @@ public static void RemoveFromTicket()
 	String name = tmp.getitem();
 	String commandText = "DELETE FROM tableorders WHERE Item = " + "'" + name + "' LIMIT 1";
 	SQL.UpdateResultSet(commandText);
-	PopulateTicket(ID);
+	PopulateTicket(Server_Screen.tableID);
 }
 
 public static void InsertItem(int table_ID, String item_name, double item_price)
@@ -297,12 +304,13 @@ public static void InsertItem(int table_ID, String item_name, double item_price)
 			item_name + "', '" + item_price +
 			"')";
 	SQL.UpdateResultSet(commandText);
-	PopulateTicket(ID);
+	PopulateTicket(Server_Screen.tableID);
 	
 }
 
 public static void PopulateTicket(int ID)
 {
+	
 	ticketListModel = new DefaultListModel<Tickets>();
 	String commandText = "SELECT * from tableorders WHERE ID = " + ID;
 	ResultSet rs = SQL.ExecuteResultSet(commandText); 

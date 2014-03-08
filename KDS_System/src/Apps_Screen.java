@@ -13,8 +13,7 @@ import java.awt.Color;
 public class Apps_Screen {
 	int item_id = 0;
 	double item_price = 0;
-	String item_name = "";
-	public static int table_id = 4;
+	String item_name = "";	
 	JFrame frmAppetizers;
 
 	/**
@@ -72,7 +71,7 @@ public class Apps_Screen {
 				item_price = Query.PriceQuery(item_id);
 				//Add Spin dip to ticket
 				item_name = Query.ItemQuery(item_id);			
-				Table_Edit_Screen.InsertItem(table_id, item_name, item_price);
+				Table_Edit_Screen.InsertItem( Server_Screen.tableID, item_name, item_price);
 				frmAppetizers.dispose();
 				
 			}
@@ -89,7 +88,7 @@ public class Apps_Screen {
 				item_price = Query.PriceQuery(item_id);
 				//Add mozz sticks to ticket
 				item_name = Query.ItemQuery(item_id);			
-				Table_Edit_Screen.InsertItem(table_id, item_name, item_price);
+				Table_Edit_Screen.InsertItem( Server_Screen.tableID, item_name, item_price);
 				frmAppetizers.dispose();
 			}
 		});
@@ -105,7 +104,7 @@ public class Apps_Screen {
 				item_price = Query.PriceQuery(item_id);
 				//Add chicken fingers to ticket
 				item_name = Query.ItemQuery(item_id);			
-				Table_Edit_Screen.InsertItem(table_id, item_name, item_price);
+				Table_Edit_Screen.InsertItem( Server_Screen.tableID, item_name, item_price);
 				frmAppetizers.dispose();
 			}
 		});

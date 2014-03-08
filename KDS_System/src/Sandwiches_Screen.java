@@ -16,7 +16,7 @@ public class Sandwiches_Screen {
 	int item_id = 0;
 	double item_price = 0;
 	String item_name = "";
-	public static int table_id = 4;
+	
 
 	/**
 	 * Launch the application.
@@ -73,7 +73,7 @@ public class Sandwiches_Screen {
 				item_price = Query.PriceQuery(item_id);
 				//Add a tuna melt to the ticket
 				item_name = Query.ItemQuery(item_id);			
-				Table_Edit_Screen.InsertItem(table_id, item_name, item_price);
+				Table_Edit_Screen.InsertItem(Server_Screen.tableID, item_name, item_price);
 				frmSandwiches.dispose();
 			}
 		});
@@ -89,7 +89,7 @@ public class Sandwiches_Screen {
 				item_price = Query.PriceQuery(item_id);
 				//Add grilled chicken sandwich to ticket
 				item_name = Query.ItemQuery(item_id);			
-				Table_Edit_Screen.InsertItem(table_id, item_name, item_price);
+				Table_Edit_Screen.InsertItem(Server_Screen.tableID, item_name, item_price);
 				frmSandwiches.dispose();
 			}
 		});
@@ -105,7 +105,7 @@ public class Sandwiches_Screen {
 				item_price = Query.PriceQuery(item_id);
 				//Add regular philly cheesesteak to ticket
 				item_name = Query.ItemQuery(item_id);			
-				Table_Edit_Screen.InsertItem(table_id, item_name, item_price);
+				Table_Edit_Screen.InsertItem(Server_Screen.tableID, item_name, item_price);
 				frmSandwiches.dispose();
 			}
 		});
@@ -121,7 +121,7 @@ public class Sandwiches_Screen {
 				item_price = Query.PriceQuery(item_id);
 				//Add chicken philly to ticket
 				item_name = Query.ItemQuery(item_id);			
-				Table_Edit_Screen.InsertItem(table_id, item_name, item_price);
+				Table_Edit_Screen.InsertItem(Server_Screen.tableID, item_name, item_price);
 				frmSandwiches.dispose();
 			}
 		});
@@ -137,7 +137,7 @@ public class Sandwiches_Screen {
 				item_price = Query.PriceQuery(item_id);
 				//Add veggie sandwich to ticket
 				item_name = Query.ItemQuery(item_id);			
-				Table_Edit_Screen.InsertItem(table_id, item_name, item_price);
+				Table_Edit_Screen.InsertItem(Server_Screen.tableID, item_name, item_price);
 				frmSandwiches.dispose();
 			}
 		});
@@ -153,7 +153,7 @@ public class Sandwiches_Screen {
 				item_price = Query.PriceQuery(item_id);
 				//add turkey sandwich to ticket
 				item_name = Query.ItemQuery(item_id);			
-				Table_Edit_Screen.InsertItem(table_id, item_name, item_price);
+				Table_Edit_Screen.InsertItem(Server_Screen.tableID, item_name, item_price);
 				frmSandwiches.dispose();
 			}
 		});
@@ -169,7 +169,7 @@ public class Sandwiches_Screen {
 				item_price = Query.PriceQuery(item_id);
 				//add a club to the ticket
 				item_name = Query.ItemQuery(item_id);			
-				Table_Edit_Screen.InsertItem(table_id, item_name, item_price);
+				Table_Edit_Screen.InsertItem(Server_Screen.tableID, item_name, item_price);
 				frmSandwiches.dispose();
 			}
 		});
@@ -185,7 +185,7 @@ public class Sandwiches_Screen {
 				item_price = Query.PriceQuery(item_id);
 				//add roast beef to the ticket
 				item_name = Query.ItemQuery(item_id);			
-				Table_Edit_Screen.InsertItem(table_id, item_name, item_price);
+				Table_Edit_Screen.InsertItem(Server_Screen.tableID, item_name, item_price);
 				frmSandwiches.dispose();
 			}
 		});
@@ -201,7 +201,7 @@ public class Sandwiches_Screen {
 				item_price = Query.PriceQuery(item_id);
 				//add grilled ham and cheese to the ticket
 				item_name = Query.ItemQuery(item_id);			
-				Table_Edit_Screen.InsertItem(table_id, item_name, item_price);
+				Table_Edit_Screen.InsertItem(Server_Screen.tableID, item_name, item_price);
 				frmSandwiches.dispose();
 			}
 		});
@@ -217,7 +217,7 @@ public class Sandwiches_Screen {
 				item_price = Query.PriceQuery(item_id);
 				//add a fish sandwich to the ticket
 				item_name = Query.ItemQuery(item_id);			
-				Table_Edit_Screen.InsertItem(table_id, item_name, item_price);
+				Table_Edit_Screen.InsertItem(Server_Screen.tableID, item_name, item_price);
 				frmSandwiches.dispose();
 			}
 		});
@@ -233,7 +233,7 @@ public class Sandwiches_Screen {
 				item_price = Query.PriceQuery(item_id);
 				//add a chicken salad sandwich to the ticket
 				item_name = Query.ItemQuery(item_id);			
-				Table_Edit_Screen.InsertItem(table_id, item_name, item_price);
+				Table_Edit_Screen.InsertItem(Server_Screen.tableID, item_name, item_price);
 				frmSandwiches.dispose();
 			}
 		});

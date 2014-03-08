@@ -30,9 +30,8 @@ import javax.swing.ListSelectionModel;
 public class Cashout_Screen {
 
 	JFrame frmCashoutTable;
-	private JTextField tipAmount;
-	public static DefaultListModel<Tickets> ticketListModel2;
-	public static int table_id = 4;
+	public static JTextField tipAmount;
+	public static DefaultListModel<Tickets> ticketListModel2;	
 	public static double total;
 
 	/**
@@ -106,6 +105,12 @@ public class Cashout_Screen {
 		frmCashoutTable.getContentPane().add(lblNewLabel);
 		
 		JButton btnCash = new JButton("Cash");
+		btnCash.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent arg0) {
+				InsertTip();
+			}
+		});
 		btnCash.setFont(new Font("Dialog", Font.BOLD, 20));
 		btnCash.setBounds(12, 409, 117, 47);
 		frmCashoutTable.getContentPane().add(btnCash);
@@ -136,7 +141,7 @@ public class Cashout_Screen {
 		
 		
 		frmCashoutTable.setTitle("Cashout Table");
-		frmCashoutTable.setBounds(100, 100, 400, 600);
+		frmCashoutTable.setBounds(100, 100, 431, 600);
 		frmCashoutTable.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		GetTotal();
 		String tmp = new DecimalFormat("#.##").format(total);
@@ -148,10 +153,10 @@ public class Cashout_Screen {
 	
 	public static void GetTotal()
 	{
-		String commandText = "SELECT * from tableorders WHERE ID = " + table_id;
+		String commandText = "SELECT * from tableorders WHERE ID = " + Server_Screen.tableID;
 		ResultSet rs = SQL.ExecuteResultSet(commandText); 
 		double tmpprice = 0;
-		
+		total = 0;
 		try {
 			while ((rs!=null) && (rs.next()))
 			{			
@@ -172,4 +177,35 @@ public class Cashout_Screen {
 	}
 	
 	
+
+
+
+public static void InsertTip()
+{
+	int ID = Login_Screen.ID2;
+	double tip = 0;
+	
+	String commandText = "SELECT * FROM employee WHERE ID = " + ID;
+	
+	ResultSet rs = SQL.ExecuteResultSet(commandText);
+	try
+	{
+		while ((rs!=null) && (rs.next()))
+		{
+			tip = rs.getDouble("TipTotal");
+		}
+	}
+	catch (SQLException e)
+	{
+		JOptionPane.showMessageDialog(null, e.toString());		
+	}
+	String tmp = tipAmount.getText();
+	double tipTotal = tip + Double.parseDouble(tmp);
+	
+	commandText = "UPDATE employee SET TipTotal = " + "'" + tipTotal + "'" + "WHERE ID = " + ID;
+	SQL.UpdateResultSet(commandText);
+	
 }
+}
+
+

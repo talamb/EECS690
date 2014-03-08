@@ -17,7 +17,7 @@ public class Drinks_Screen {
 	double item_price = 0;
 	JFrame frmDrinks;
 	String item_name = "";
-	public static int table_id = 4;
+	
 
 	/**
 	 * Launch the application.
@@ -74,7 +74,7 @@ public class Drinks_Screen {
 				item_price = Query.PriceQuery(item_id);
 				//Add a soft drink to the ticket
 				item_name = Query.ItemQuery(item_id);			
-				Table_Edit_Screen.InsertItem(table_id, item_name, item_price);
+				Table_Edit_Screen.InsertItem(Server_Screen.tableID, item_name, item_price);
 				frmDrinks.dispose();
 			}
 		});
@@ -90,7 +90,7 @@ public class Drinks_Screen {
 				item_price = Query.PriceQuery(item_id);
 				//Add a coffee to the ticket
 				item_name = Query.ItemQuery(item_id);			
-				Table_Edit_Screen.InsertItem(table_id, item_name, item_price);
+				Table_Edit_Screen.InsertItem(Server_Screen.tableID, item_name, item_price);
 				frmDrinks.dispose();
 			}
 		});
@@ -106,7 +106,7 @@ public class Drinks_Screen {
 				item_price = Query.PriceQuery(item_id);
 				//Add hot tea to the ticket
 				item_name = Query.ItemQuery(item_id);			
-				Table_Edit_Screen.InsertItem(table_id, item_name, item_price);
+				Table_Edit_Screen.InsertItem(Server_Screen.tableID, item_name, item_price);
 				frmDrinks.dispose();
 			}
 		});
@@ -122,7 +122,7 @@ public class Drinks_Screen {
 				item_price = Query.PriceQuery(item_id);
 				//Add iced tea to the ticket
 				item_name = Query.ItemQuery(item_id);			
-				Table_Edit_Screen.InsertItem(table_id, item_name, item_price);
+				Table_Edit_Screen.InsertItem(Server_Screen.tableID, item_name, item_price);
 				frmDrinks.dispose();
 			}
 		});
@@ -138,7 +138,7 @@ public class Drinks_Screen {
 				item_price = Query.PriceQuery(item_id);
 				//Add a small milk to the ticket
 				item_name = Query.ItemQuery(item_id);			
-				Table_Edit_Screen.InsertItem(table_id, item_name, item_price);
+				Table_Edit_Screen.InsertItem(Server_Screen.tableID, item_name, item_price);
 				frmDrinks.dispose();
 			}
 		});
@@ -154,7 +154,7 @@ public class Drinks_Screen {
 				item_price = Query.PriceQuery(item_id);
 				// Add a large milk to the ticket
 				item_name = Query.ItemQuery(item_id);			
-				Table_Edit_Screen.InsertItem(table_id, item_name, item_price);
+				Table_Edit_Screen.InsertItem(Server_Screen.tableID, item_name, item_price);
 				frmDrinks.dispose();
 			}
 		});
@@ -170,7 +170,7 @@ public class Drinks_Screen {
 				item_price = Query.PriceQuery(item_id);
 				// Add a small OJ to the ticket
 				item_name = Query.ItemQuery(item_id);			
-				Table_Edit_Screen.InsertItem(table_id, item_name, item_price);
+				Table_Edit_Screen.InsertItem(Server_Screen.tableID, item_name, item_price);
 				frmDrinks.dispose();
 			}
 		});
@@ -186,7 +186,7 @@ public class Drinks_Screen {
 				item_price = Query.PriceQuery(item_id);
 				// Add a large OJ to the ticket
 				item_name = Query.ItemQuery(item_id);			
-				Table_Edit_Screen.InsertItem(table_id, item_name, item_price);
+				Table_Edit_Screen.InsertItem(Server_Screen.tableID, item_name, item_price);
 				frmDrinks.dispose();
 			}
 		});
