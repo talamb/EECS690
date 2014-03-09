@@ -200,8 +200,9 @@ public class Login_Screen {
 											
 						//All checks passed launch the server screen
 						clearAllFields();
-						Server_Screen Server_GUI_Instance = new Server_Screen();
-						Server_GUI_Instance.frmServerMain.setVisible(true);					
+						//Server_Screen Server_GUI_Instance = new Server_Screen();
+						//Server_GUI_Instance.frmServerMain.setVisible(true);
+						Server_Screen.run();
 						frmKds.dispose();
 						}
 					

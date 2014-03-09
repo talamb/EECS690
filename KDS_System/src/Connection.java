@@ -12,47 +12,10 @@ public class Connection {
 	public static String name;
 	public static String url2;
 	public static java.sql.Connection con;
-	public static String DeptTable = "Test_Department";
-	public static String EmpTable = "Test_Employee";
-	public static String EmpDeptTable = "Test_EmpDept";
+
 	
 	
-	
-	/**	 
-	 * The CreateFile() Method checks to see whether a ConnectionInfo.txt files exists,
-	 * and if it doesn't then it creates one with the default connection settings.
-	 * After checking if the file needs to be created, it calls the ReadFile() method.
-	 */
-	/*
-	private static void CreateFile()
-	{
-		File connection;
-		  connection = new File("ConnectionInfo.txt");
-		  if(!connection.exists()){
-		  try {
-			  FileWriter fstream = new FileWriter("ConnectionInfo.txt");
-			try {				  
-				  BufferedWriter out = new BufferedWriter(fstream);
-				  out.write("Username: "+ username + "\n");				
-				  out.write("Password: "+ password + "\n");
-				  out.write("ConnectionURL: " + url);
-				  out.close();
-			} catch (FileNotFoundException e) {				
-				e.printStackTrace();
-			}
-			
-		} catch (IOException e) {
-			
-			e.printStackTrace();
-		}		  
-		  
-		  }
-	}
-	*/
-		/**	 
-		 * The ReadFile() method reads the information from the ConnectionInfo.txt file
-		 * and stores the username, password and connection url into the appropriate variables.	 
-		 */	  
+
 	private static void ReadFile(){
 	  try{	 		  
 		  FileInputStream fstream = new FileInputStream("ConnectionInfo.txt");	  

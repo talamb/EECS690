@@ -1,5 +1,3 @@
-import java.awt.EventQueue;
-
 import javax.swing.JFrame;
 
 import java.awt.Color;
@@ -37,18 +35,16 @@ public class Cashout_Screen {
 	/**
 	 * Launch the application.
 	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
+	
+			public static void run() {
 				try {
 					Cashout_Screen window = new Cashout_Screen();
-					window.frmCashoutTable.setVisible(false);
+					window.frmCashoutTable.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
 			}
-		});
-	}
+	
 
 	/**
 	 * Create the application.
@@ -71,6 +67,7 @@ public class Cashout_Screen {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				//Exit cashout screen without closing ticket
+				Table_Edit_Screen.run();
 				frmCashoutTable.dispose();
 				
 			}
@@ -95,6 +92,7 @@ public class Cashout_Screen {
 		frmCashoutTable.getContentPane().add(lblTotal);
 		
 		tipAmount = new JTextField();
+		tipAmount.setText("0");
 		tipAmount.setBackground(Color.LIGHT_GRAY);
 		tipAmount.setBounds(211, 366, 114, 19);
 		frmCashoutTable.getContentPane().add(tipAmount);
@@ -109,6 +107,9 @@ public class Cashout_Screen {
 			@Override
 			public void mouseClicked(MouseEvent arg0) {
 				InsertTip();
+				RemoveFromDatabase();
+				Server_Screen.run();
+				frmCashoutTable.dispose();
 			}
 		});
 		btnCash.setFont(new Font("Dialog", Font.BOLD, 20));
@@ -116,11 +117,29 @@ public class Cashout_Screen {
 		frmCashoutTable.getContentPane().add(btnCash);
 		
 		JButton btnCc = new JButton("CC");
+		btnCc.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				InsertTip();
+				RemoveFromDatabase();
+				Server_Screen.run();
+				frmCashoutTable.dispose();
+			}
+		});
 		btnCc.setFont(new Font("Dialog", Font.BOLD, 20));
 		btnCc.setBounds(136, 409, 117, 47);
 		frmCashoutTable.getContentPane().add(btnCc);
 		
 		JButton btnCheck = new JButton("Check");
+		btnCheck.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				InsertTip();
+				RemoveFromDatabase();
+				Server_Screen.run();
+				frmCashoutTable.dispose();
+			}
+		});
 		btnCheck.setFont(new Font("Dialog", Font.BOLD, 20));
 		btnCheck.setBounds(260, 409, 117, 47);
 		frmCashoutTable.getContentPane().add(btnCheck);
@@ -206,6 +225,18 @@ public static void InsertTip()
 	SQL.UpdateResultSet(commandText);
 	
 }
+
+public static void RemoveFromDatabase()
+{
+	int ID = Server_Screen.tableID;
+	String commandText = "SET SQL_SAFE_UPDATES=0;";
+	SQL.UpdateResultSet(commandText);
+	commandText = "DELETE FROM tableorders WHERE ID = " + ID;
+	SQL.UpdateResultSet(commandText);
+	
+	
+}
+
 }
 
 

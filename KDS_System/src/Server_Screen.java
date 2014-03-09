@@ -1,5 +1,3 @@
-import java.awt.EventQueue;
-
 import javax.swing.JFrame;
 
 import java.awt.Toolkit;
@@ -25,18 +23,16 @@ public class Server_Screen {
 	/**
 	 * Launch the application.
 	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
+
+			public static void run() {
 				try {
 					Server_Screen window = new Server_Screen();
-					window.frmServerMain.setVisible(false);
+					window.frmServerMain.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
 			}
-		});
-	}
+		
 
 	/**
 	 * Create the application.
@@ -410,8 +406,10 @@ public class Server_Screen {
 	//This method will check to see if the table already exists locally and either create it or
 	//pull it's data as needed
 	public void checkIfTableExsists() {
-		Table_Edit_Screen Table_GUI_Instance = new Table_Edit_Screen();
-		Table_GUI_Instance.frmTableEdit.setVisible(true);
+		//Table_Edit_Screen Table_GUI_Instance = new Table_Edit_Screen();
+		//Table_GUI_Instance.frmTableEdit.setVisible(true);
+		Table_Edit_Screen.run();
+		frmServerMain.dispose();
 	}
 		
 		
