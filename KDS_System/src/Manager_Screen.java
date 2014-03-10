@@ -162,7 +162,7 @@ public class Manager_Screen {
 			@Override
 			public void mouseClicked(MouseEvent arg0) {
 				
-				
+				managerLoggedIn = true;
 				Reservation_Screen Reservation_GUI_Instance = new Reservation_Screen();
 				Reservation_GUI_Instance.frmReserveMain.setVisible(true);
 				
