@@ -34,7 +34,7 @@ public class Login_Screen {
 	//Test logins for ...testing
 	//int test_ID_1 = 1234;
 	//int test_PIN_1 = 1234;
-	boolean One_Logged_in = true;
+	//boolean One_Logged_in = true;
 	
 	
 	//int test_ID_2 = 5678;
@@ -155,6 +155,7 @@ public class Login_Screen {
 		int PIN = Integer.valueOf(Pin_Field.getText());
 		int Pin2 = -1;
 		int manager = -1;
+		boolean clocked_in = false;
 		
 		commandText = "SELECT * from Employee WHERE ID = " + ID;
 		
@@ -194,9 +195,21 @@ public class Login_Screen {
 				}
 				else
 				{
-				
+					//I'm just going to reuse the rs and commandText
+					//see if user is clocked in if rs.next() is false then user is not logged in
+					commandText = "SELECT ID from EmployeeTime WHERE ID = " + ID2 + " and IsClockedIn = 1";
+					rs = SQL.ExecuteResultSet(commandText);
+					
+					try {
+						if(rs.next()){
+							clocked_in = true;
+						}
+					} catch (SQLException e) {
+						System.out.println(e.getMessage());
+					}
+					
 					//Is the Server currently logged in? (note we may skip this check for managers)
-					if(One_Logged_in){
+					if(clocked_in){
 											
 						//All checks passed launch the server screen
 						clearAllFields();
