@@ -171,6 +171,19 @@ public class Manager_Screen {
 		btnReserveTables.setFont(new Font("Dialog", Font.BOLD, 20));
 		btnReserveTables.setBounds(297, 138, 205, 113);
 		frmManagerMain.getContentPane().add(btnReserveTables);
+		
+		JButton btnAddEmployee = new JButton("Add Employee");
+		btnAddEmployee.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent arg0) {
+				Add_Employee_Screen Add_Employee_GUI_Instance = new Add_Employee_Screen();
+				Add_Employee_GUI_Instance.frmAddEmployee.setVisible(true);
+				frmManagerMain.dispose();
+			}
+		});
+		btnAddEmployee.setFont(new Font("Dialog", Font.BOLD, 20));
+		btnAddEmployee.setBounds(43, 276, 205, 114);
+		frmManagerMain.getContentPane().add(btnAddEmployee);
 	}
 	
 	//This method will restart the loging screen and destory this instance of the manager screen

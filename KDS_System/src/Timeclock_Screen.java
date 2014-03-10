@@ -106,7 +106,7 @@ public class Timeclock_Screen {
 			}
 		});
 		btnManagerSwitch.setFont(new Font("Tahoma", Font.PLAIN, 25));
-		btnManagerSwitch.setBounds(287, 493, 225, 44);
+		btnManagerSwitch.setBounds(249, 493, 263, 44);
 		frmTimeclock.getContentPane().add(btnManagerSwitch);
 		
 		JButton btnLoginSwitch = new JButton("Switch To Login");
@@ -120,7 +120,7 @@ public class Timeclock_Screen {
 			}
 		});
 		btnLoginSwitch.setFont(new Font("Tahoma", Font.PLAIN, 25));
-		btnLoginSwitch.setBounds(539, 493, 211, 44);
+		btnLoginSwitch.setBounds(522, 493, 252, 44);
 		frmTimeclock.getContentPane().add(btnLoginSwitch);
 	}
 	
