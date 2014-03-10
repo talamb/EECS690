@@ -1,3 +1,4 @@
+import java.awt.Color;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
@@ -9,6 +10,7 @@ import javax.swing.ImageIcon;
 import javax.swing.JButton;
 
 import java.awt.Font;
+
 import javax.swing.SwingConstants;
 
 import java.awt.event.MouseAdapter;
@@ -64,12 +66,24 @@ public class Reservation_Screen {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				
-				checkIfTableExsists(25);
+				reserveTable(25);
 			}
 		});
 		table25btn.setHorizontalAlignment(SwingConstants.LEFT);
 		table25btn.setFont(new Font("Tahoma", Font.PLAIN, 10));
-		table25btn.setBackground(UIManager.getColor("Button.background"));
+		if (isReserved(25)){		
+			
+			table25btn.setBackground(Color.BLUE);
+			
+		}
+		else if(isInUse(25)){
+			
+			table25btn.setBackground(Color.RED);
+		}
+		else{
+			
+			table25btn.setBackground(UIManager.getColor("Button.background"));
+		}
 		table25btn.setBounds(665, 464, 74, 87);
 		frmReserveMain.getContentPane().add(table25btn);
 		
@@ -78,12 +92,24 @@ public class Reservation_Screen {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				
-				checkIfTableExsists(24);
+				reserveTable(24);
 			}
 		});
 		table24btn.setHorizontalAlignment(SwingConstants.LEFT);
 		table24btn.setFont(new Font("Tahoma", Font.PLAIN, 10));
-		table24btn.setBackground(UIManager.getColor("Button.background"));
+		if (isReserved(24)){		
+			
+			table24btn.setBackground(Color.BLUE);
+			
+		}
+		else if(isInUse(24)){
+			
+			table24btn.setBackground(Color.RED);
+		}
+		else{
+			
+			table24btn.setBackground(UIManager.getColor("Button.background"));
+		}
 		table24btn.setBounds(664, 360, 75, 87);
 		frmReserveMain.getContentPane().add(table24btn);
 		
@@ -92,12 +118,24 @@ public class Reservation_Screen {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				
-				checkIfTableExsists(23);
+				reserveTable(23);
 			}
 		});
 		table23btn.setHorizontalAlignment(SwingConstants.LEFT);
 		table23btn.setFont(new Font("Tahoma", Font.PLAIN, 10));
-		table23btn.setBackground(UIManager.getColor("Button.background"));
+		if (isReserved(23)){		
+			
+			table23btn.setBackground(Color.BLUE);
+			
+		}
+		else if(isInUse(23)){
+			
+			table23btn.setBackground(Color.RED);
+		}
+		else{
+			
+			table23btn.setBackground(UIManager.getColor("Button.background"));
+		}
 		table23btn.setBounds(663, 251, 74, 87);
 		frmReserveMain.getContentPane().add(table23btn);
 		
@@ -106,12 +144,24 @@ public class Reservation_Screen {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				
-				checkIfTableExsists(22);
+				reserveTable(22);
 			}
 		});
 		table22btn.setHorizontalAlignment(SwingConstants.LEFT);
 		table22btn.setFont(new Font("Tahoma", Font.PLAIN, 10));
-		table22btn.setBackground(UIManager.getColor("Button.background"));
+		if (isReserved(22)){		
+			
+			table22btn.setBackground(Color.BLUE);
+			
+		}
+		else if(isInUse(22)){
+			
+			table22btn.setBackground(Color.RED);
+		}
+		else{
+			
+			table22btn.setBackground(UIManager.getColor("Button.background"));
+		}
 		table22btn.setBounds(663, 148, 75, 83);
 		frmReserveMain.getContentPane().add(table22btn);
 		
@@ -120,12 +170,24 @@ public class Reservation_Screen {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				
-				checkIfTableExsists(21);
+				reserveTable(21);
 			}
 		});
 		table21btn.setFont(new Font("Tahoma", Font.PLAIN, 10));
 		table21btn.setHorizontalAlignment(SwingConstants.LEFT);
-		table21btn.setBackground(UIManager.getColor("Button.background"));
+		if (isReserved(21)){		
+			
+			table21btn.setBackground(Color.BLUE);
+			
+		}
+		else if(isInUse(21)){
+			
+			table21btn.setBackground(Color.RED);
+		}
+		else{
+			
+			table21btn.setBackground(UIManager.getColor("Button.background"));
+		}
 		table21btn.setBounds(663, 52, 75, 83);
 		frmReserveMain.getContentPane().add(table21btn);
 		
@@ -134,165 +196,361 @@ public class Reservation_Screen {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				
-				checkIfTableExsists(20);
+				reserveTable(20);
 			}
 		});
 		table20btn.setBounds(540, 448, 53, 51);
 		frmReserveMain.getContentPane().add(table20btn);
+		if (isReserved(20)){		
+			
+			table20btn.setBackground(Color.BLUE);
+			
+		}
+		else if(isInUse(20)){
+			
+			table20btn.setBackground(Color.RED);
+		}
+		else{
+			
+			table20btn.setBackground(UIManager.getColor("Button.background"));
+		}
 		
 		JButton table19btn = new JButton("19");
 		table19btn.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				
-				checkIfTableExsists(19);
+				reserveTable(19);
 			}
 		});
 		table19btn.setBounds(540, 268, 53, 51);
 		frmReserveMain.getContentPane().add(table19btn);
+		if (isReserved(19)){		
+			
+			table19btn.setBackground(Color.BLUE);
+			
+		}
+		else if(isInUse(19)){
+			
+			table19btn.setBackground(Color.RED);
+		}
+		else{
+			
+			table19btn.setBackground(UIManager.getColor("Button.background"));
+		}
+		
 		
 		JButton table18btn = new JButton("18");
 		table18btn.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				
-				checkIfTableExsists(18);
+				reserveTable(18);
 			}
 		});
 		table18btn.setBounds(540, 93, 53, 51);
 		frmReserveMain.getContentPane().add(table18btn);
+		if (isReserved(18)){		
+			
+			table18btn.setBackground(Color.BLUE);
+			
+		}
+		else if(isInUse(18)){
+			
+			table18btn.setBackground(Color.RED);
+		}
+		else{
+			
+			table18btn.setBackground(UIManager.getColor("Button.background"));
+		}
 		
 		JButton table17btn = new JButton("17");
 		table17btn.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				
-				checkIfTableExsists(17);
+				reserveTable(17);
 			}
 		});
 		table17btn.setBounds(457, 448, 53, 51);
 		frmReserveMain.getContentPane().add(table17btn);
+		if (isReserved(17)){		
+			
+			table17btn.setBackground(Color.BLUE);
+			
+		}
+		else if(isInUse(17)){
+			
+			table17btn.setBackground(Color.RED);
+		}
+		else{
+			
+			table17btn.setBackground(UIManager.getColor("Button.background"));
+		}
 		
 		JButton table16btn = new JButton("16");
 		table16btn.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				
-				checkIfTableExsists(16);
+				reserveTable(16);
 			}
 		});
 		table16btn.setBounds(457, 268, 53, 51);
 		frmReserveMain.getContentPane().add(table16btn);
+		if (isReserved(16)){		
+			
+			table16btn.setBackground(Color.BLUE);
+			
+		}
+		else if(isInUse(16)){
+			
+			table16btn.setBackground(Color.RED);
+		}
+		else{
+			
+			table16btn.setBackground(UIManager.getColor("Button.background"));
+		}
 		
 		JButton table15btn = new JButton("15");
 		table15btn.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				
-				checkIfTableExsists(15);
+				reserveTable(15);
 			}
 		});
 		table15btn.setBounds(457, 93, 53, 51);
 		frmReserveMain.getContentPane().add(table15btn);
+		if (isReserved(15)){		
+			
+			table15btn.setBackground(Color.BLUE);
+			
+		}
+		else if(isInUse(15)){
+			
+			table15btn.setBackground(Color.RED);
+		}
+		else{
+			
+			table15btn.setBackground(UIManager.getColor("Button.background"));
+		}
 		
 		JButton table14btn = new JButton("14");
 		table14btn.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				
-				checkIfTableExsists(14);
+				reserveTable(14);
 			}
 		});
 		table14btn.setBounds(374, 448, 53, 51);
 		frmReserveMain.getContentPane().add(table14btn);
+		if (isReserved(14)){		
+			
+			table14btn.setBackground(Color.BLUE);
+			
+		}
+		else if(isInUse(14)){
+			
+			table14btn.setBackground(Color.RED);
+		}
+		else{
+			
+			table14btn.setBackground(UIManager.getColor("Button.background"));
+		}
 		
 		JButton table13btn = new JButton("13");
 		table13btn.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				
-				checkIfTableExsists(13);
+				reserveTable(13);
 			}
 		});
 		table13btn.setBounds(375, 268, 53, 51);
 		frmReserveMain.getContentPane().add(table13btn);
+		if (isReserved(13)){		
+			
+			table13btn.setBackground(Color.BLUE);
+			
+		}
+		else if(isInUse(13)){
+			
+			table13btn.setBackground(Color.RED);
+		}
+		else{
+			
+			table13btn.setBackground(UIManager.getColor("Button.background"));
+		}
 		
 		JButton table12btn = new JButton("12");
 		table12btn.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				
-				checkIfTableExsists(12);
+				reserveTable(12);
 			}
 		});
 		table12btn.setBounds(370, 93, 52, 51);
 		frmReserveMain.getContentPane().add(table12btn);
+		if (isReserved(12)){		
+			
+			table12btn.setBackground(Color.BLUE);
+			
+		}
+		else if(isInUse(12)){
+			
+			table12btn.setBackground(Color.RED);
+		}
+		else{
+			
+			table12btn.setBackground(UIManager.getColor("Button.background"));
+		}
 		
 		JButton table11btn = new JButton("11");
 		table11btn.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				
-				checkIfTableExsists(11);
+				reserveTable(11);
 			}
 		});
 		table11btn.setBounds(285, 448, 53, 51);
 		frmReserveMain.getContentPane().add(table11btn);
+		if (isReserved(11)){		
+			
+			table11btn.setBackground(Color.BLUE);
+			
+		}
+		else if(isInUse(11)){
+			
+			table11btn.setBackground(Color.RED);
+		}
+		else{
+			
+			table11btn.setBackground(UIManager.getColor("Button.background"));
+		}
 		
 		JButton table10btn = new JButton("10");
 		table10btn.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				
-				checkIfTableExsists(10);
+				reserveTable(10);
 			}
 		});
 		table10btn.setBounds(285, 269, 53, 51);
 		frmReserveMain.getContentPane().add(table10btn);
+		if (isReserved(10)){		
+			
+			table10btn.setBackground(Color.BLUE);
+			
+		}
+		else if(isInUse(10)){
+			
+			table10btn.setBackground(Color.RED);
+		}
+		else{
+			
+			table10btn.setBackground(UIManager.getColor("Button.background"));
+		}
 		
 		JButton table9btn = new JButton("9");
 		table9btn.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				
-				checkIfTableExsists(9);
+				reserveTable(9);
 			}
 		});
 		table9btn.setBounds(290, 92, 48, 51);
 		frmReserveMain.getContentPane().add(table9btn);
+		if (isReserved(9)){		
+			
+			table9btn.setBackground(Color.BLUE);
+			
+		}
+		else if(isInUse(9)){
+			
+			table9btn.setBackground(Color.RED);
+		}
+		else{
+			
+			table9btn.setBackground(UIManager.getColor("Button.background"));
+		}
 		
 		JButton table8btn = new JButton("8");
 		table8btn.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				
-				checkIfTableExsists(8);
+				reserveTable(8);
 			}
 		});
 		table8btn.setBounds(210, 448, 48, 51);
 		frmReserveMain.getContentPane().add(table8btn);
+		if (isReserved(8)){		
+			
+			table8btn.setBackground(Color.BLUE);
+			
+		}
+		else if(isInUse(8)){
+			
+			table8btn.setBackground(Color.RED);
+		}
+		else{
+			
+			table8btn.setBackground(UIManager.getColor("Button.background"));
+		}
 		
 		JButton table7btn = new JButton("7");
 		table7btn.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				
-				checkIfTableExsists(7);
+				reserveTable(7);
 			}
 		});
 		table7btn.setBounds(210, 269, 48, 51);
 		frmReserveMain.getContentPane().add(table7btn);
+		if (isReserved(7)){		
+			
+			table7btn.setBackground(Color.BLUE);
+			
+		}
+		else if(isInUse(7)){
+			
+			table7btn.setBackground(Color.RED);
+		}
+		else{
+			
+			table7btn.setBackground(UIManager.getColor("Button.background"));
+		}
 		
 		JButton table6btn = new JButton("6");
 		table6btn.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				
-				checkIfTableExsists(6);
+				reserveTable(6);
 			}
 		});
 		table6btn.setBounds(210, 93, 48, 51);
 		frmReserveMain.getContentPane().add(table6btn);
+		if (isReserved(6)){		
+			
+			table6btn.setBackground(Color.BLUE);
+			
+		}
+		else if(isInUse(6)){
+			
+			table6btn.setBackground(Color.RED);
+		}
+		else{
+			
+			table6btn.setBackground(UIManager.getColor("Button.background"));
+		}
 		
 		JButton table5btn = new JButton("Table 5");
 		table5btn.setFont(new Font("Tahoma", Font.PLAIN, 10));
@@ -300,12 +558,25 @@ public class Reservation_Screen {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				
-				checkIfTableExsists(5);
+				reserveTable(5);
 			}
 		});
-		table5btn.setBackground(UIManager.getColor("Button.background"));
+
 		table5btn.setBounds(45, 466, 74, 84);
 		frmReserveMain.getContentPane().add(table5btn);
+		if (isReserved(5)){		
+			
+			table5btn.setBackground(Color.BLUE);
+			
+		}
+		else if(isInUse(5)){
+			
+			table5btn.setBackground(Color.RED);
+		}
+		else{
+			
+			table5btn.setBackground(UIManager.getColor("Button.background"));
+		}
 		
 		JButton table4btn = new JButton("Table 4");
 		table4btn.setFont(new Font("Tahoma", Font.PLAIN, 10));
@@ -313,26 +584,51 @@ public class Reservation_Screen {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				
-				checkIfTableExsists(4);
+				reserveTable(4);
 			}
 		});
-		table4btn.setBackground(UIManager.getColor("Button.background"));
+		
 		table4btn.setBounds(48, 363, 70, 83);
 		frmReserveMain.getContentPane().add(table4btn);
+		if (isReserved(4)){		
+			
+			table4btn.setBackground(Color.BLUE);
+			
+		}
+		else if(isInUse(4)){
+			
+			table4btn.setBackground(Color.RED);
+		}
+		else{
+			
+			table4btn.setBackground(UIManager.getColor("Button.background"));
+		}
 		
 		JButton table3btn = new JButton("Table 3");
 		table3btn.setFont(new Font("Tahoma", Font.PLAIN, 10));
 		table3btn.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				//Combos_Screen Combo_GUI_INSTANCE = new Combos_Screen();
-				//Combo_GUI_INSTANCE.frmCombinations.setVisible(true);				
-				checkIfTableExsists(3);
+							
+				reserveTable(3);
 			}
 		});
-		table3btn.setBackground(UIManager.getColor("Button.background"));
+		
 		table3btn.setBounds(48, 257, 70, 85);
 		frmReserveMain.getContentPane().add(table3btn);
+		if (isReserved(3)){		
+			
+			table3btn.setBackground(Color.BLUE);
+			
+		}
+		else if(isInUse(3)){
+			
+			table3btn.setBackground(Color.RED);
+		}
+		else{
+			
+			table3btn.setBackground(UIManager.getColor("Button.background"));
+		}
 		
 		JButton table2btn = new JButton("Table 2");
 		table2btn.setFont(new Font("Tahoma", Font.PLAIN, 10));
@@ -340,12 +636,25 @@ public class Reservation_Screen {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				
-				checkIfTableExsists(2);
+				reserveTable(2);
 			}
 		});
-		table2btn.setBackground(UIManager.getColor("Button.background"));
+		
 		table2btn.setBounds(47, 153, 70, 84);
 		frmReserveMain.getContentPane().add(table2btn);
+		if (isReserved(2)){		
+			
+			table2btn.setBackground(Color.BLUE);
+			
+		}
+		else if(isInUse(2)){
+			
+			table2btn.setBackground(Color.RED);
+		}
+		else{
+			
+			table2btn.setBackground(UIManager.getColor("Button.background"));
+		}
 		
 		JButton table1btn = new JButton("Table 1");
 		table1btn.setFont(new Font("Tahoma", Font.PLAIN, 10));
@@ -353,12 +662,25 @@ public class Reservation_Screen {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				
-				checkIfTableExsists(1);
+				reserveTable(1);
 			}
 		});
-		table1btn.setBackground(UIManager.getColor("Button.background"));
+		
 		table1btn.setBounds(49, 48, 70, 83);
 		frmReserveMain.getContentPane().add(table1btn);
+		if (isReserved(1)){		
+			
+			table1btn.setBackground(Color.BLUE);
+			
+		}
+		else if(isInUse(1)){
+			
+			table1btn.setBackground(Color.RED);
+		}
+		else{
+			
+			table1btn.setBackground(UIManager.getColor("Button.background"));
+		}
 		
 		JButton logoutbtn = new JButton("Logout");
 		//If coming from the manager login display Back button
@@ -390,6 +712,44 @@ public class Reservation_Screen {
 
 	}
 	
+	private boolean isInUse(int i) {
+		// Determine if the table is in use
+		
+		
+		
+		return false;
+	}
+
+	private boolean isReserved(int i) {
+		// Determine if the table is reserved
+		
+		
+		return false;
+	}
+
+	protected void reserveTable(int i) {
+		//This function should check if the table is reserved or not
+		//and allow the table to be reserved if it is not and throw an error
+		//if it is.
+		if(!isReserved(i)){
+			
+			
+			
+		}
+		//Else throw an error
+		else{
+			
+			
+			
+		}
+		
+		
+		
+		
+	}		
+		
+
+
 	protected void exitServerScreen() {
 		
 		//If this is a manager then just go back to the manager screen
@@ -409,45 +769,5 @@ public class Reservation_Screen {
 		}
 	}//End exit server screen
 		
-
-
-	//This method will check to see if the table already exists locally and either create it or
-	//pull it's data as needed
-	protected void checkIfTableExsists(int i) {
-		// TODO Auto-generated method stub
-		String commandText = "SELECT * from TableOrders WHERE ID = " + i;
-		ResultSet rs;
-		int tableExists = 0;
-		try{
-			//Execute command
-			rs = SQL.ExecuteResultSet(commandText); 
-		
-			while (rs.next()) {
-				tableExists = rs.getInt("ID");
-			}
-		}
-		catch (SQLException e) {
-			System.out.println(e.getMessage());
-		}
-		//If value is 0 table does not exist
-		if(tableExists == 0 )
-		{
-			//CreateTableOrder()??
-			System.out.println("Table does not exist");
-			
-			//**********Test code we'll need to make sure this is pulling the correct data in the release**********
-			//Go to the table edit screen for now
-			
-			Table_Edit_Screen Table_GUI_Instance = new Table_Edit_Screen();
-			Table_GUI_Instance.frmTableEdit.setVisible(true);	
-			
-		}
-		else
-		{
-			tableID = i; //set tableID for use in table edit screen.
-		
-		}
-		//Once we have a table selected we can call table_edit_screen with it's current information
-		
-	}
 }
+	
