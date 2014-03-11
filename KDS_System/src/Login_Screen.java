@@ -21,6 +21,7 @@ import java.awt.Color;
 import java.io.IOException;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.awt.Toolkit;
 
 
 public class Login_Screen {
@@ -81,6 +82,7 @@ public class Login_Screen {
 	 */
 	private void initialize() {
 		frmKds = new JFrame();
+		frmKds.setIconImage(Toolkit.getDefaultToolkit().getImage(Login_Screen.class.getResource("/General_images/GI_icon.png")));
 		frmKds.getContentPane().setBackground(new Color(255, 255, 255));
 		frmKds.getContentPane().setForeground(new Color(255, 255, 255));
 		frmKds.setTitle("KDS_1.0");
