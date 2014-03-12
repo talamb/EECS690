@@ -12,7 +12,7 @@ import java.awt.event.MouseEvent;
 
 public class Cook_Screen {
 
-	private JFrame frmCooksView;
+	JFrame frmCooksView;
 	private JList<Tickets> ticketLst1;
 	private JList<Tickets> ticketLst2;
 	private JList<Tickets> ticketLst3;
@@ -28,7 +28,7 @@ public class Cook_Screen {
 			public void run() {
 				try {
 					Cook_Screen window = new Cook_Screen();
-					window.frmCooksView.setVisible(true);
+					window.frmCooksView.setVisible(false);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}

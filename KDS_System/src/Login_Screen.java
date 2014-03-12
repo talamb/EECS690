@@ -194,7 +194,26 @@ public class Login_Screen {
 					Manager_GUI_Instance.frmManagerMain.setVisible(true);
 					frmKds.dispose();					
 					
+				}				
+				//ELse if owner
+				else if(manager == 100){
+					
+					clearAllFields();
+					Owner_Screen Owner_GUI_Instance = new Owner_Screen();
+					Owner_GUI_Instance.frmOwnerMain.setVisible(true);
+					frmKds.dispose();								
+					
 				}
+				//else if cook
+				else if(manager == 5){
+				
+					clearAllFields();
+					Cook_Screen Cook_GUI_Instance = new Cook_Screen();
+					Cook_GUI_Instance.frmCooksView.setVisible(true);
+					frmKds.dispose();				
+					
+				}
+				
 				else
 				{
 					//I'm just going to reuse the rs and commandText
@@ -243,21 +262,7 @@ public class Login_Screen {
 		}
 		//End server check section
 		
-		//Manager instance check 
-		//Perhaps the ID is a manager ID...
-		
-				
-			
-			
-		//Cook instance check will go here	as another else if	
-		
-		//Owner instance check 	will go here as another else if	
-		
-		
-		//If the user ID is not found in the database at all
-		//This check goes last in the logic chain
-		
-		
+	
 		
 	}//end check_login() method
 	
