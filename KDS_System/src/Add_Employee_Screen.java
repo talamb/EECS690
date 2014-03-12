@@ -97,9 +97,9 @@ public class Add_Employee_Screen {
 		lblFullTime.setBounds(46, 368, 105, 25);
 		frmAddEmployee.getContentPane().add(lblFullTime);
 		
-		JLabel lblManager = new JLabel("Manager?:");
+		JLabel lblManager = new JLabel("Type");
 		lblManager.setFont(new Font("Dialog", Font.BOLD, 20));
-		lblManager.setBounds(46, 451, 105, 25);
+		lblManager.setBounds(29, 453, 65, 25);
 		frmAddEmployee.getContentPane().add(lblManager);
 		
 		FirstNameText = new JTextField();
@@ -141,27 +141,34 @@ public class Add_Employee_Screen {
 		rdbtnFull.setBounds(228, 369, 100, 23);
 		frmAddEmployee.getContentPane().add(rdbtnFull);
 		
-		JRadioButton rdbtnNotManager = new JRadioButton("No");
+		JRadioButton rdbtnNotManager = new JRadioButton("Server");
 		ManagerGroup.add(rdbtnNotManager);
 		rdbtnNotManager.setSelected(true);
 		rdbtnNotManager.setFont(new Font("Dialog", Font.BOLD, 20));
 		rdbtnNotManager.setBackground(Color.WHITE);
-		rdbtnNotManager.setBounds(161, 451, 51, 28);
+		rdbtnNotManager.setBounds(111, 451, 100, 28);
 		frmAddEmployee.getContentPane().add(rdbtnNotManager);
 		
 		final JRadioButton rdbtnManager = new JRadioButton("Manager");
 		ManagerGroup.add(rdbtnManager);
 		rdbtnManager.setBackground(Color.WHITE);
 		rdbtnManager.setFont(new Font("Dialog", Font.BOLD, 20));
-		rdbtnManager.setBounds(228, 456, 115, 23);
+		rdbtnManager.setBounds(111, 486, 115, 23);
 		frmAddEmployee.getContentPane().add(rdbtnManager);
 		
 		final JRadioButton rdbtnOwner = new JRadioButton("Owner");
 		ManagerGroup.add(rdbtnOwner);
 		rdbtnOwner.setFont(new Font("Dialog", Font.BOLD, 20));
 		rdbtnOwner.setBackground(Color.WHITE);
-		rdbtnOwner.setBounds(345, 456, 92, 23);
+		rdbtnOwner.setBounds(245, 486, 92, 23);
 		frmAddEmployee.getContentPane().add(rdbtnOwner);
+		
+		final JRadioButton rdbtnCook = new JRadioButton("Cook");
+		ManagerGroup.add(rdbtnCook);
+		rdbtnCook.setFont(new Font("Dialog", Font.BOLD, 20));
+		rdbtnCook.setBackground(Color.WHITE);
+		rdbtnCook.setBounds(245, 454, 75, 23);
+		frmAddEmployee.getContentPane().add(rdbtnCook);
 		
 		JButton btnAddEmployee = new JButton("Add Employee");
 		btnAddEmployee.addMouseListener(new MouseAdapter() {
@@ -223,9 +230,13 @@ public class Add_Employee_Screen {
 			private int managerBTNCheck() {
 				if(rdbtnOwner.isSelected()){
 					return 100;
-				}
+				}				
 				else if(rdbtnManager.isSelected()){
 					return 10;
+				}
+				else if (rdbtnCook.isSelected())
+				{
+					return 5;
 				}
 				else{
 					return 0;
@@ -277,6 +288,8 @@ public class Add_Employee_Screen {
 		btnManagerMenu.setFont(new Font("Dialog", Font.BOLD, 17));
 		btnManagerMenu.setBounds(520, 431, 227, 43);
 		frmAddEmployee.getContentPane().add(btnManagerMenu);
+		
+	
 	}
 	
 	@SuppressWarnings("deprecation")
@@ -289,6 +302,4 @@ public class Add_Employee_Screen {
 			return true;
 		}
 	}
-	
-
 }
