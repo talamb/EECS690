@@ -172,6 +172,8 @@ public class Cook_Screen {
 		btnClear6.setFont(new Font("Tahoma", Font.BOLD, 20));
 		btnClear6.setBounds(626, 508, 114, 24);
 		frmCooksView.getContentPane().add(btnClear6);
+		
+		ticketLst1.setModel(Table_Edit_Screen.ticketListModel);
 	}
 
 	protected void clearTicket(int i) {
