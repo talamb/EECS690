@@ -16,7 +16,11 @@ import java.awt.event.MouseEvent;
 import javax.swing.SwingConstants;
 
 import java.awt.Color;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
 import javax.swing.JTextPane;
+import javax.swing.JList;
 
 
 public class Manager_Screen {
@@ -143,6 +147,39 @@ public class Manager_Screen {
 		textPane.setBackground(Color.LIGHT_GRAY);
 		textPane.setBounds(563, 73, 188, 262);
 		frmManagerMain.getContentPane().add(textPane);
+		
+		JList list = new JList();
+		list.setBounds(563, 74, 188, 261);
+		frmManagerMain.getContentPane().add(list);
+		/*ResultSet rs;
+		String commandText = " ";
+		float hours = 0;
+		String curEmp = " ";
+		boolean isFullTime = true;
+		
+		try{
+			commandText = "SELECT WorkStatus, WeeklyHour, FirstName, LastName from Employee"
+					+ " WHERE ID = " + id;
+			rs = SQL.ExecuteResultSet(commandText);
+			
+			while(rs.next()){
+				hours = rs.getFloat("WeeklyHour");
+				curEmp = rs.getNString("FirstName") + " " + rs.getNString("LastName");
+				isFullTime = rs.getBoolean("WorkStatus");
+			}
+		}
+		catch(SQLException e){
+			System.out.println(e.getMessage());
+		}
+		*/
+		//for each in talamb.employeetime
+			//if isclockedin
+				//check ID with workstatus in talamb.employee
+				//if !workstatus
+					//curHours =  current time - clock in time
+					// if curHours + talamb.employee.weeklyhour > 28
+						//Employee name appended to list
+		
 		
 		JLabel lblNewLabel_1 = new JLabel("Alerts:");
 		lblNewLabel_1.setVerticalAlignment(SwingConstants.BOTTOM);

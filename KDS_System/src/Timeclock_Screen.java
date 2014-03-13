@@ -248,8 +248,37 @@ public class Timeclock_Screen {
 	}
 	
 	private void addPunchin(int id){
+		ResultSet rs;
+		String commandText = " ";
+		float hours = 0;
+		String curEmp = " ";
+		boolean isFullTime = true;
+		
+		try{
+			commandText = "SELECT WorkStatus, WeeklyHour, FirstName, LastName from Employee"
+					+ " WHERE ID = " + id;
+			rs = SQL.ExecuteResultSet(commandText);
+			
+			while(rs.next()){
+				hours = rs.getFloat("WeeklyHour");
+				curEmp = rs.getNString("FirstName") + " " + rs.getNString("LastName");
+				isFullTime = rs.getBoolean("WorkStatus");
+			}
+		}
+		catch(SQLException e){
+			System.out.println(e.getMessage());
+		}
+		
+		if ((30 > hours) && (hours >= 28) && (!isFullTime)){
+			JOptionPane.showMessageDialog(null, "Warning! Part-time employee, " + curEmp + ", is currently over 28 hours.");
+		}
+		
+		if ((hours >= 30) && (!isFullTime)){
+			JOptionPane.showMessageDialog(null, "Warning! Warning! Part-Time Employee, " + curEmp + ", Is Currently Overtime.");
+		}
+		
 		//Clock Out is a place holder here
-		String commandText = "INSERT INTO `EmployeeTime`(`ID`, `Tips`, `Clock Out`, `IsClockedIn`) VALUES ("+id+", 0, 0,1)";
+		commandText = "INSERT INTO `EmployeeTime`(`ID`, `Tips`, `Clock Out`, `IsClockedIn`) VALUES ("+id+", 0, 0,1)";
 		SQL.UpdateResultSet(commandText);
 		
 		ID_Field.setText(null);
